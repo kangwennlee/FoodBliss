@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <!--
+Food Bliss
+Author: Lee Kang Wenn, Yang Poh Yee, Chan Peck Hui
+Date: 23/03/2017
+Filename: homepage.html
+-->
+    <title>Food Bliss</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Main CSS -->
+    <link href="css/main.css" type="text/css" rel="stylesheet" />
+    <!--Slideshow-->
+    <link href="css/homepage.css" type="text/css" rel="stylesheet" />
+    <!--google font-->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+
+<body>
+    <!--Logo and menu-->
+    <div id="heading">
+        <div class="topnav" id="myTopnav">
+            <a href="homepage.html">
+                <img src="css/FoodBliss%20logo.png" alt="logo" style="padding:0px; width:58px;" />
+            </a>
+            <a href="cs.html">RECIPE</a>
+            <a href="cs.html">TIPS &amp; GUIDELINES</a>
+            <a href="cs.html">KITCHEN ESSENTIALS</a>
+            <a href="cs.html">ABOUT US</a>
+            <a href="cs.html">OTHERS</a>
+            <input type="text" name="search" placeholder="Search.." class="searchbar">
+            <a href="javascript:void(0);" class="icon" onclick="resize()">&#9776;</a>
+        </div>
+    </div>
+
+    <div id="pageContent">
+
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <img src="hompage/slideshow/ss1.jpg" style="width:100%">
+                <div class="overlay">
+                    <div class="text">
+                        <a href="http://www.seriouseats.com/2017/03/how-to-make-venetian-radicchio-risotto.html">Radicchio Adds Color and Complexity to Classic Risotto</a></div>
+                </div>
+            </div>
+
+            <div class="mySlides">
+                <img src="hompage/slideshow/ss2.jpg" style="width:100%">
+                <div class="overlay">
+                    <div class="text"><a href="http://www.seriouseats.com/2017/03/how-to-make-poached-chicken-green-goddess-asparagus-canal-house.html">The Canal House Perfect Bite: Poach Your Chicken and Asparagus for a Light, Easy Meal</a></div>
+                </div>
+            </div>
+
+            <div class="mySlides">
+                <img src="hompage/slideshow/ss3.jpg" style="width:100%">
+                <div class="overlay">
+                    <div class="text"><a href="http://www.seriouseats.com/2017/03/vegan-meat-dairy-substitutes-recipes.html">15 Vegan Substitutes to Impress Your Meat-Loving, Cheese-Crazy Friends</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="cooktech">
+            <h1 style="text-align:center;color: white; text-shadow: 2px 2px 4px #000000;">COOKING TECHNIQUES</h1>
+            <div class="grid">
+                <div class="square">
+                    <a href="http://www.seriouseats.com/2017/03/how-to-make-venetian-radicchio-risotto.html">
+                        <img src="hompage/ct/20170111-radicchio-risotto-vicky-wasik-16.jpg">
+                        <h4 class="stext">Radicchio Adds Color and Complexity to Classic Risotto</h4>
+                        <h6 class="stext">DANIEL GRITZER</h6>
+                    </a>
+                </div>
+                <div class="square">
+                    <a href="#">
+                        <img src="hompage/ct/20170316-poached-chicken-aspargus-canal-house-9.jpg">
+                        <h4 class="stext">Poach Your Chicken and Asparagus for a Light, Easy Meal</h4>
+                        <h6 class="stext">CANAL HOUSE</h6>
+                    </a>
+
+                </div>
+                <div class="square">
+                    <a href="http://www.seriouseats.com/2017/03/how-to-make-easy-baked-shirred-eggs-creamy-greens-spinach-chard-kale.html">
+                        <img src="hompage/ct/20170210-creamy-kale-eggs-emily-matt-clifton-2.jpg">
+                        <h4 class="stext">Cheesy Baked Eggs, Meat Creamed Spinach (and Kale, and Swiss Chard)</h4>
+                        <h6 class="stext">EMILY AND MATT CLIFTON</h6>
+                    </a>
+                </div>
+                <div class="square">
+                    <a href="http://www.seriouseats.com/2017/03/how-to-make-japanese-mentaiko-spaghetti.html">
+                        <img src="hompage/ct/20170210-mentaiko-spaghetti-vicky-wasik-8.jpg">
+                        <h4 class="stext">Japanese Mentaiko Spaghetti: Drunk Food So Good, You Can Eat It Sober</h4>
+                        <h6 class="stext">DANIEL GRITZER</h6>
+                    </a>
+                </div>
+                <div class="square">
+                    <a href="#">
+                        <img src="hompage/ct/20160330-vegan-saag-paneer-tofu-cauliflower-recipe-16.jpg">
+                        <h4 class="stext">The Food Lab: How to Make Rich and Creamy Vegan Saag Paneerr</h4>
+                        <h6 class="stext">THE FOOD LAB</h6>
+                    </a>
+                </div>
+                <div class="square">
+                    <a href="#">
+                        <img src="hompage/ct/20170228-bagel-troubleshooting-vicky-wasik-9.jpg">
+                        <h4 class="stext">6 Common Bagel-Making Problems and How to Fix Them</h4>
+                        <h6 class="stext">STELLA PARKS</h6>
+                    </a>
+                </div>
+                <div class="square">
+                    <a href="#">
+                        <img src="hompage/ct/20170217-vegan-collard-greens-vicky-wasik-8.jpg">
+                        <h4 class="stext">How to Make Rich and Smoky Collard Greens, With or Without Meat</h4>
+                        <h6 class="stext">DANIEL GRITZER</h6>
+                    </a>
+                </div>
+
+
+            </div>
+            <p id="morebox"><a href="cs.html">MORE TECHNIQUES</a></p>
+        </div>
+
+        <div id="videos" style="background-color: darkslategray;">
+            <h1 style="text-align:center; color:white;padding-top:10px;">VIDEOS</h1>
+            <div class="gridVideo">
+                <div class="frameVideo">
+                    <iframe src="https://www.youtube.com/embed/mW0dmFD4y00" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="frameVideo">
+                    <iframe src="https://www.youtube.com/embed/bx1ow-tQOxQ" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="frameVideo">
+                    <iframe src="https://www.youtube.com/embed/Bi6WSZ6L3es" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="frameVideo">
+                    <iframe src="https://www.youtube.com/embed/8tA9lCdGqvY" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="footer">
+        <p id="flogo">
+            <a href="homepage.html">
+                <img src="css/FoodBliss%20logo.png" alt="flogo" />
+            </a>
+        </p>
+        <p id="scicon">
+            <!-- Add font awesome icons -->
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-rss"></a>
+        </p>
+        <p>&copy 2017 Food Bliss.</p>
+    </div>
+
+    <div id="script">
+        <script>
+            //  FOR SLIDESHOW
+            var slideIndex = 0;
+            carousel();
+
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > x.length) {
+                    slideIndex = 1
+                }
+                x[slideIndex - 1].style.display = "block";
+                setTimeout(carousel, 5000); // Change image every 5 seconds
+            }
+            // FOR RESIZE
+            function resize() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+
+        </script>
+    </div>
+
+</body>
+
+</html>
