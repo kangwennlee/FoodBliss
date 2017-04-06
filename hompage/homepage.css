@@ -54,77 +54,6 @@ Filename: homepage.css
 }
 
 
-/*Cooking Techniques*/
-
-.grid {
-    width: 999px;
-    margin: auto;
-}
-
-.grid .square {
-    display: inline-block;
-    margin-left: 5px;
-    margin-right: 5px;
-    width: 320px;
-    background-color: white;
-    margin-bottom: 15px;
-}
-
-.square img {
-    width: 320px;
-}
-
-.square a {
-    text-decoration: none;
-    color: black;
-}
-
-.square .stext {
-    word-wrap: break-word;
-    padding-left: 10px;
-}
-
-
-/*MORE TECHNIQUE BOX*/
-
-#morebox {
-    text-align: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    width: 150px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: white;
-    border: 2px solid orangered;
-}
-
-#morebox a {
-    text-decoration: none;
-    color: orangered;
-    font-weight: bold;
-}
-
-
-/*VIDEO CSS*/
-
-.gridVideo {
-    width: 1758px;
-    margin: auto;
-}
-
-.gridVideo .frameVideo {
-    display: inline-block;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 30px;
-}
-
-.frameVideo iframe {
-    width: 854px;
-    height: 480px;
-}
-
-
 /* On smaller screens, decrease text size, width,margin on .square and video */
 
 @media only screen and (max-width: 1758px) {
@@ -132,14 +61,6 @@ Filename: homepage.css
     .overlay .text {
         margin-top: -50%;
         font-size: 35px;
-    }
-    /*    Video*/
-    .gridVideo {
-        width: 854px;
-    }
-    .gridVideo .frameVideo {
-        margin-left: 0px;
-        margin-right: 0px;
     }
 }
 
@@ -152,46 +73,14 @@ Filename: homepage.css
         margin-top: -70%;
         font-size: 30px;
     }
-    /*    Cooking Technique*/
-    .grid {
-        width: 665px;
-    }
-    /*    Video*/
-    .gridVideo {
-        width: 670px;
-    }
-    .gridVideo .frameVideo {
-        margin-left: 25px;
-        margin-right: 25px;
-        max-width: 670px;
-    }
-    .frameVideo iframe {
-        width: 620px;
-        height: 465px;
-    }
 }
 
 @media only screen and (max-width: 750px) {
     .mySlides img {
-        height: 400px;
+        height: 300px;
     }
     .overlay .text {
         margin-top: -80%;
         font-size: 20px;
-    }
-    .grid {
-        width: 330px;
-    }
-    .gridVideo {
-        width: 340px;
-    }
-    .gridVideo .frameVideo {
-        margin-left: 10px;
-        margin-right: 10px;
-        max-width: 340px;
-    }
-    .frameVideo iframe {
-        width: 320px;
-        height: 240px;
     }
 }

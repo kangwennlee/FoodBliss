@@ -48,6 +48,29 @@ HEADING
     display: none;
 }
 
+.searchbar {
+    width: 130px;
+    box-sizing: border-box;
+    border: 0px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: white;
+    background-color: #333;
+    background-image: url("search.png");
+    background-size: 40px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+
+/* When the input field gets focus, change its width to 100% */
+
+.searchbar:focus {
+    width: 30%;
+}
+
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 
@@ -86,29 +109,6 @@ HEADING
         display: block;
         text-align: left;
     }
-}
-
-.searchbar {
-    width: 130px;
-    box-sizing: border-box;
-    border: 0px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    color: white;
-    background-color: #333;
-    background-image: url("search.png");
-    background-size: 40px;
-    background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-}
-
-
-/* When the input field gets focus, change its width to 100% */
-
-.searchbar:focus {
-    width: 35%;
 }
 
 
@@ -178,4 +178,127 @@ FOOTER
 .fa-youtube {
     background: #bb0000;
     color: white;
+}
+
+
+/*Grid Css*/
+
+.grid {
+    width: 999px;
+    margin: auto;
+}
+
+.grid .square {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 320px;
+    background-color: white;
+    margin-bottom: 15px;
+}
+
+.square img {
+    width: 320px;
+}
+
+.square a {
+    text-decoration: none;
+    color: black;
+}
+
+.square .stext {
+    word-wrap: break-word;
+    padding-left: 10px;
+}
+
+
+/*MORE TECHNIQUE BOX*/
+
+.morebox {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border: 2px solid orangered;
+}
+
+.morebox a {
+    text-decoration: none;
+    color: orangered;
+    font-weight: bold;
+}
+
+
+/*Grid Video Css*/
+
+.gridVideo {
+    width: 1758px;
+    margin: auto;
+}
+
+.gridVideo .frameVideo {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+}
+
+.frameVideo iframe {
+    width: 854px;
+    height: 480px;
+}
+
+
+/* On smaller screens, decrease text size, width,margin on .square and video */
+
+@media only screen and (max-width: 1758px) {
+    /*    Video*/
+    .gridVideo {
+        width: 854px;
+    }
+    .gridVideo .frameVideo {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    /*   Grid*/
+    .grid {
+        width: 665px;
+    }
+    /*    Video*/
+    .gridVideo {
+        width: 670px;
+    }
+    .gridVideo .frameVideo {
+        margin-left: 25px;
+        margin-right: 25px;
+        max-width: 670px;
+    }
+    .frameVideo iframe {
+        width: 620px;
+        height: 465px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .grid {
+        width: 330px;
+    }
+    .gridVideo {
+        width: 340px;
+    }
+    .gridVideo .frameVideo {
+        margin-left: 10px;
+        margin-right: 10px;
+        max-width: 340px;
+    }
+    .frameVideo iframe {
+        width: 320px;
+        height: 240px;
+    }
 }

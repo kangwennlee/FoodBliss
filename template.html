@@ -33,11 +33,11 @@ Filename: template.html
             <a href="cs.html">ABOUT US</a>
             <a href="cs.html">OTHERS</a>
             <input type="text" name="search" placeholder="Search.." class="searchbar">
-            <a href="javascript:void(0);" class="icon" onclick="resize()">&#9776;</a>
+            <a href="javascript:void(0);" class="icon" onclick="dispH()">&#9776;</a>
         </div>
         <script>
-            // FOR RESIZE
-            function resize() {
+            // For the menu to display vertically instead horizontally
+            function dispH() {
                 var x = document.getElementById("myTopnav");
                 if (x.className === "topnav") {
                     x.className += " responsive";
@@ -45,6 +45,7 @@ Filename: template.html
                     x.className = "topnav";
                 }
             }
+
         </script>
     </div>
 
