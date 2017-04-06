@@ -14,10 +14,10 @@ Filename: homepage.html
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--Main CSS -->
     <link href="main/main.css" type="text/css" rel="stylesheet" />
-    <!--Slideshow-->
-    <link href="hompage/homepage.css" type="text/css" rel="stylesheet" />
     <!--google font-->
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <!--Include your css here-->
+    <link href="hompage/homepage.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body>
@@ -35,6 +35,18 @@ Filename: homepage.html
             <input type="text" name="search" placeholder="Search.." class="searchbar">
             <a href="javascript:void(0);" class="icon" onclick="resize()">&#9776;</a>
         </div>
+        <script>
+            // FOR RESIZE
+            function resize() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+
+        </script>
     </div>
 
     <div id="pageContent">
@@ -61,6 +73,26 @@ Filename: homepage.html
                     <div class="text"><a href="http://www.seriouseats.com/2017/03/vegan-meat-dairy-substitutes-recipes.html">15 Vegan Substitutes to Impress Your Meat-Loving, Cheese-Crazy Friends</a></div>
                 </div>
             </div>
+            <script>
+                //  FOR SLIDESHOW
+                var slideIndex = 0;
+                carousel();
+
+                function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    slideIndex++;
+                    if (slideIndex > x.length) {
+                        slideIndex = 1
+                    }
+                    x[slideIndex - 1].style.display = "block";
+                    setTimeout(carousel, 5000); // Change image every 5 seconds
+                }
+
+            </script>
         </div>
 
         <div id="cooktech">
@@ -158,38 +190,6 @@ Filename: homepage.html
             <a href="#" class="fa fa-rss"></a>
         </p>
         <p>&copy 2017 Food Bliss.</p>
-    </div>
-
-    <div id="script">
-        <script>
-            //  FOR SLIDESHOW
-            var slideIndex = 0;
-            carousel();
-
-            function carousel() {
-                var i;
-                var x = document.getElementsByClassName("mySlides");
-                for (i = 0; i < x.length; i++) {
-                    x[i].style.display = "none";
-                }
-                slideIndex++;
-                if (slideIndex > x.length) {
-                    slideIndex = 1
-                }
-                x[slideIndex - 1].style.display = "block";
-                setTimeout(carousel, 5000); // Change image every 5 seconds
-            }
-            // FOR RESIZE
-            function resize() {
-                var x = document.getElementById("myTopnav");
-                if (x.className === "topnav") {
-                    x.className += " responsive";
-                } else {
-                    x.className = "topnav";
-                }
-            }
-
-        </script>
     </div>
 
 </body>

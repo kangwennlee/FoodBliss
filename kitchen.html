@@ -17,7 +17,7 @@ Filename: template.html
     <!--google font-->
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <!--Include ur css for this page here-->
-    <link type="text/css" href="main/main.css" rel="stylesheet">
+    <link type="text/css" href="kitchen/kitchen.css" rel="stylesheet">
 </head>
 
 <body>
@@ -35,6 +35,18 @@ Filename: template.html
             <input type="text" name="search" placeholder="Search.." class="searchbar">
             <a href="javascript:void(0);" class="icon" onclick="resize()">&#9776;</a>
         </div>
+        <script>
+            // FOR RESIZE
+            function resize() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+
+        </script>
     </div>
 
     <div id="pageContent">
@@ -56,21 +68,6 @@ Filename: template.html
             <a href="#" class="fa fa-rss"></a>
         </p>
         <p>&copy 2017 Food Bliss.</p>
-    </div>
-
-    <div id="script">
-        <script>
-            // FOR RESIZE
-            function resize() {
-                var x = document.getElementById("myTopnav");
-                if (x.className === "topnav") {
-                    x.className += " responsive";
-                } else {
-                    x.className = "topnav";
-                }
-            }
-
-        </script>
     </div>
 
 </body>
