@@ -9,7 +9,8 @@ Filename: homepage.css
 /* Slideshow container */
 
 .slideshow-container {
-    margin: 3em 2%;
+    max-width: 1500px;
+    margin: auto;
 }
 
 .mySlides {
@@ -20,7 +21,7 @@ Filename: homepage.css
 
 .mySlides img {
     width: 100%;
-    height: 600px;
+    height: 550px;
     object-fit: cover;
 }
 

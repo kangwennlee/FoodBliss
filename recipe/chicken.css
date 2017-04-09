@@ -1,0 +1,64 @@
+/*
+Food Bliss
+Author: Lee Kang Wenn, Yang Poh Yee, Chan Peck Hui
+Date: 23/03/2017
+Filename: chicken.css
+*/
+
+.recipe {
+    max-width: 800px;
+}
+
+.recipe div img {
+    width: 100%;
+}
+
+.recipe h1 {
+    text-align: left;
+    font-size: 40px;
+    color: aqua;
+    text-shadow: 1px 1px black;
+}
+
+#credit {
+    font-size: 15px;
+}
+
+.recipe p {
+    line-height: 30px;
+}
+
+.recipe ul {
+    line-height: 30px;
+}
+
+.recipe img {
+    height: 600px;
+}
+
+#cooktime {
+    text-align: center;
+}
+
+#cooktime p {
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+}
+
+.recipe ol {
+    line-height: 30px;
+}
+
+@media only screen and (max-width: 750px) {
+    .recipe h1 {
+        font-size: 30px;
+    }
+    .recipe div img {
+        width: 100%;
+        height: 250px;
+    }
+    #credit {
+        font-size: 10px;
+    }
+}

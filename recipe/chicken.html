@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <!--
+Food Bliss
+Author: Lee Kang Wenn, Yang Poh Yee, Chan Peck Hui
+Date: 23/03/2017
+Filename: template.html
+-->
+    <title>Food Bliss</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Main CSS -->
+    <link href="../main/main.css" type="text/css" rel="stylesheet" />
+    <!--google font-->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <!--Include ur css for this page here-->
+    <link type="text/css" href="chicken.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--Logo and menu-->
+    <nav id="heading">
+        <div class="topnav" id="myTopnav">
+            <a href="../homepage/homepage.html">
+                <img src="../main/FoodBlissLogo.png" alt="logo" style="padding:0px; width:58px;" />
+            </a>
+            <a id="recipe" href="recipe.html">RECIPE</a>
+            <a id="tips" href="../tips/tips.html">TIPS &amp; GUIDELINES</a>
+            <a id="kitchen" href="../kitchen/kitchen.html">KITCHEN ESSENTIALS</a>
+            <a id="about" href="../about/about.html">ABOUT US</a>
+            <a id="other" href="../other/other.html">OTHERS</a>
+            <input type="text" name="search" placeholder="Search.." class="searchbar">
+            <a href="javascript:void(0);" class="icon" onclick="dispH()">&#9776;</a>
+        </div>
+        <script>
+            // For the menu to display vertically instead horizontally
+            function dispH() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+            var x = location.href;
+            if (x.includes("recipe")) {
+                document.getElementById("recipe").style.backgroundColor = "red";
+            }
+            if (x.includes("tips")) {
+                document.getElementById("tips").style.backgroundColor = "red";
+            }
+            if (x.includes("kitchen")) {
+                document.getElementById("kitchen").style.backgroundColor = "red";
+            }
+            if (x.includes("about")) {
+                document.getElementById("about").style.backgroundColor = "red";
+            }
+            if (x.includes("other")) {
+                document.getElementById("other").style.backgroundColor = "red";
+            }
+
+        </script>
+    </nav>
+
+    <section id="pageContent">
+        <div class="recipe">
+            <h1 style="color:black;">Poached Chicken and Asparagus With Green Goddess Sauce Recipe</h1>
+            <h6>CANAL HOUSE</h6>
+            <div>
+                <img src="http://www.seriouseats.com/recipes/assets_c/2017/03/20170316-poached-chicken-aspargus-canal-house-10-thumb-1500xauto-436878.jpg" />
+            </div>
+            <br/>
+            <span id="credit">[Photograph: Canal House]</span>
+            <p>This easy meal of tender and juicy poached chicken with asparagus and a creamy green goddess sauce is light and fresh, perfect for marking the beginning of spring. For this dish, we lightened the green goddess with whipped cream, which softens the herbaceous flavor, making it more delicate, and lends a luscious, mousse-like consistency. (If you like, make just the dressing according to the instructions in step 4, omitting the whipped cream, and serve it with sturdy lettuces for salads.)</p>
+            <h1>WHY IT WORKS</h1>
+            <ul>
+                <li>Starting the chicken in cold water and keeping the temperature under a boil cooks it perfectly, and prevents it from becoming tight and dry.</li>
+                <li>Folding softly whipped cream into the green goddess dressing makes it incredibly light and airy.</li>
+                <li>Aromatics in the poaching liquid create a flavorful broth that can be enjoyed on its own.</li>
+            </ul>
+            <hr/>
+            <div id="cooktime">
+                <p>YIELD:<br/>Serves 4 to 6
+                </p>
+                <p>ACTIVE TIME: <br/>1 hour
+                </p>
+                <p>TOTAL TIME:<br/>1 hour 15 minutes
+                </p>
+            </div>
+            <hr/>
+            <h1>INGREDIENTS</h1>
+            <h3>For the Chicken and Asparagus:</h3>
+            <ul>
+                <li>4 bone-in, skin-on, split chicken breast halves (about 4 pounds; 1.8kg)</li>
+                <li>1 carrot, peeled and cut into large dice</li>
+                <li>1 celery rib, cut into large dice</li>
+                <li>1 leek, white and light green parts only, washed well and cut into large dice</li>
+                <li>2 large sprigs fresh tarragon</li>
+                <li>1 cup (235ml) dry white wine</li>
+                <li>1 1/2 tablespoons (15g) kosher salt, plus more for seasoning</li>
+                <li>1/2 teaspoon (3g) whole black peppercorns</li>
+                <li>12 large spears asparagus (about 1/2 pound; 225g), washed well, woody ends trimmed and stalks peeled</li>
+                <li>4 tablespoons (60g) unsalted butter, melted</li>
+            </ul>
+            <h3>For the Green Goddess Sauce:</h3>
+            <ul>
+                <li>3/4 cup (170g) mayonnaise</li>
+                <li>1/4 cup (55g) sour cream</li>
+                <li>1 tablespoon (15ml) rice wine vinegar</li>
+                <li>1/2 bunch watercress (about 2 ounces; 55g), leaves only</li>
+                <li>1/4 cup fresh tarragon leaves</li>
+                <li>1/4 cup flat-leaf parsley leaves and tender stems</li>
+                <li>1 1/2 tablespoons (15g) kosher salt, plus more for seasoning</li>
+                <li>10 fresh chives, plus minced chives for garnish</li>
+                <li>4 oil-packed anchovy fillets, drained Kosher salt and freshly ground black pepper</li>
+                <li>1 cup (240ml) heavy whipping cream</li>
+            </ul>
+            <hr/>
+            <h1>DIRECTIONS</h1>
+            <ol>
+                <li><span style="font-weight:bold;">For the Chicken and Asparagus:</span> In a large saucepan, combine chicken with carrot, celery, leek, tarragon sprigs, wine, salt, and peppercorns. Add enough water to cover chicken and other ingredients by about 1 inch. Set over medium-high heat until water temperature reaches between 150 and 160&deg;F (66 and 71&deg;C) on an instant-read thermometer; adjust heat to maintain water temperature in the 150-160&deg;F range. It's okay if the temperature bounces around a little, but try to keep it above 150 and below 170&deg;F (77&deg;C). Cook until thickest part of chicken registers 150&deg;F (66&deg;C) on an instant-read thermometer, about 1 hour. Remove chicken from broth and let rest.</li>
+                <li>When chicken is cool enough to handle, remove skin and bones. (If you want, return skin and bones to poaching liquid and simmer for 30 minutes longer, then strain and reserve liquid as a broth for another use.) Cover chicken breasts with plastic wrap, pressing plastic directly and firmly against the surface of the meat, and set aside.</li>
+                <li>Fill a skillet large enough to accommodate asparagus with cold water, add a large pinch of salt, then bring to a boil over medium-high heat. Add asparagus and cook until tender, about 4 minutes. Transfer asparagus to a paper towel-lined plate to drain, then discard paper towels. Drizzle asparagus with melted butter and set aside.</li>
+                <li><span style="font-weight:bold;">Meanwhile, for the Green Goddess Sauce:</span> Using a blender or food processor, puree mayonnaise, sour cream, vinegar, watercress, tarragon, parsley, chives, and anchovies until smooth. Season with salt and a generous grinding of black pepper. Dressing will keep, covered, in the refrigerator for up to 1 week.</li>
+                <li>About 1 hour before serving, allow dressing to come to room temperature. Before serving, use a whisk or electric mixer to whip cream in a large metal bowl until soft peaks form. Fold whipped cream into dressing to suit your taste.</li>
+                <li><span style="font-weight:bold;">To Serve:</span> Slice warm or room-temperature chicken breasts against the grain. Spoon some sauce onto a large platter. Arrange chicken on top of sauce and arrange warm or room-temperature buttered asparagus around chicken. Spoon more sauce over chicken. Season with salt and pepper and garnish with minced fresh chives. If you prefer, you can also serve on individual plates. Serve any extra green goddess sauce on the side.</li>
+            </ol>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <p id="flogo">
+            <a href="../homepage/homepage.html">
+                <img src="../main/FoodBlissLogo.png" alt="flogo" />
+            </a>
+        </p>
+        <p id="scicon">
+            <!-- Add font awesome icons -->
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-rss"></a>
+        </p>
+        <p>&copy 2017 Food Bliss.</p>
+    </footer>
+
+</body>
+
+</html>

@@ -16,7 +16,7 @@ Filename: homepage.html
     <link href="../main/main.css" type="text/css" rel="stylesheet" />
     <!--google font-->
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <!--Include your css here-->
+    <!--Include ur css for this page here-->
     <link href="homepage.css" type="text/css" rel="stylesheet" />
 </head>
 
@@ -27,11 +27,11 @@ Filename: homepage.html
             <a href="homepage.html">
                 <img src="../main/FoodBlissLogo.png" alt="logo" style="padding:0px; width:58px;" />
             </a>
-            <a href="../recipe/recipe.html">RECIPE</a>
-            <a href="cs.html">TIPS &amp; GUIDELINES</a>
-            <a href="../kitchen/kitchen.html">KITCHEN ESSENTIALS</a>
-            <a href="cs.html">ABOUT US</a>
-            <a href="cs.html">OTHERS</a>
+            <a id="recipe" href="../recipe/recipe.html">RECIPE</a>
+            <a id="tips" href="../tips/tips.html">TIPS &amp; GUIDELINES</a>
+            <a id="kitchen" href="../kitchen/kitchen.html">KITCHEN ESSENTIALS</a>
+            <a id="about" href="../about/about.html">ABOUT US</a>
+            <a id="other" href="../other/other.html">OTHERS</a>
             <input type="text" name="search" placeholder="Search.." class="searchbar">
             <a href="javascript:void(0);" class="icon" onclick="dispH()">&#9776;</a>
         </div>
@@ -45,7 +45,22 @@ Filename: homepage.html
                     x.className = "topnav";
                 }
             }
-
+            var x = location.href;
+            if (x.includes("recipe.html")) {
+                document.getElementById("recipe").style.backgroundColor = "red";
+            }
+            if (x.includes("tips.html")) {
+                document.getElementById("tips").style.backgroundColor = "red";
+            }
+            if (x.includes("kitchen.html")) {
+                document.getElementById("kitchen").style.backgroundColor = "red";
+            }
+            if (x.includes("about.html")) {
+                document.getElementById("about").style.backgroundColor = "red";
+            }
+            if (x.includes("other.html")) {
+                document.getElementById("other").style.backgroundColor = "red";
+            }
         </script>
     </nav>
 
@@ -56,21 +71,21 @@ Filename: homepage.html
                 <img src="slideshow/ss1.jpg">
                 <div class="overlay">
                     <div class="text">
-                        <a href="http://www.seriouseats.com/2017/03/how-to-make-venetian-radicchio-risotto.html">Radicchio Adds Color and Complexity to Classic Risotto</a></div>
+                        <a href="#">Radicchio Adds Color and Complexity to Classic Risotto</a></div>
                 </div>
             </div>
 
             <div class="mySlides">
                 <img src="slideshow/ss2.jpg">
                 <div class="overlay">
-                    <div class="text"><a href="http://www.seriouseats.com/2017/03/how-to-make-poached-chicken-green-goddess-asparagus-canal-house.html">The Canal House Perfect Bite: Poach Your Chicken and Asparagus for a Light, Easy Meal</a></div>
+                    <div class="text"><a href="../recipe/chicken.html">The Canal House Perfect Bite: Poach Your Chicken and Asparagus for a Light, Easy Meal</a></div>
                 </div>
             </div>
 
             <div class="mySlides">
                 <img src="slideshow/ss3.jpg">
                 <div class="overlay">
-                    <div class="text"><a href="http://www.seriouseats.com/2017/03/vegan-meat-dairy-substitutes-recipes.html">15 Vegan Substitutes to Impress Your Meat-Loving, Cheese-Crazy Friends</a></div>
+                    <div class="text"><a href="#">15 Vegan Substitutes to Impress Your Meat-Loving, Cheese-Crazy Friends</a></div>
                 </div>
             </div>
             <script>
@@ -91,22 +106,21 @@ Filename: homepage.html
                     x[slideIndex - 1].style.display = "block";
                     setTimeout(carousel, 5000); // Change image every 5 seconds
                 }
-
             </script>
         </div>
 
         <div id="cooktech">
-            <h1 style="text-align:center;color: white; text-shadow: 2px 2px 4px #000000;">COOKING TECHNIQUES</h1>
+            <h1 style="text-align:center;color: black;">COOKING TECHNIQUES</h1>
             <div class="grid">
                 <div class="square">
-                    <a href="http://www.seriouseats.com/2017/03/how-to-make-venetian-radicchio-risotto.html">
+                    <a href="#">
                         <img src="ct/20170111-radicchio-risotto-vicky-wasik-16.jpg">
                         <h4 class="stext">Radicchio Adds Color and Complexity to Classic Risotto</h4>
                         <h6 class="stext">DANIEL GRITZER</h6>
                     </a>
                 </div>
                 <div class="square">
-                    <a href="#">
+                    <a href="../recipe/chicken.html">
                         <img src="ct/20170316-poached-chicken-aspargus-canal-house-9.jpg">
                         <h4 class="stext">Poach Your Chicken and Asparagus for a Light, Easy Meal</h4>
                         <h6 class="stext">CANAL HOUSE</h6>
@@ -114,14 +128,14 @@ Filename: homepage.html
 
                 </div>
                 <div class="square">
-                    <a href="http://www.seriouseats.com/2017/03/how-to-make-easy-baked-shirred-eggs-creamy-greens-spinach-chard-kale.html">
+                    <a href="#">
                         <img src="ct/20170210-creamy-kale-eggs-emily-matt-clifton-2.jpg">
                         <h4 class="stext">Cheesy Baked Eggs, Meat Creamed Spinach (and Kale, and Swiss Chard)</h4>
                         <h6 class="stext">EMILY AND MATT CLIFTON</h6>
                     </a>
                 </div>
                 <div class="square">
-                    <a href="http://www.seriouseats.com/2017/03/how-to-make-japanese-mentaiko-spaghetti.html">
+                    <a href="#">
                         <img src="ct/20170210-mentaiko-spaghetti-vicky-wasik-8.jpg">
                         <h4 class="stext">Japanese Mentaiko Spaghetti: Drunk Food So Good, You Can Eat It Sober</h4>
                         <h6 class="stext">DANIEL GRITZER</h6>
@@ -148,10 +162,15 @@ Filename: homepage.html
                         <h6 class="stext">DANIEL GRITZER</h6>
                     </a>
                 </div>
-
-
+                <div class="square">
+                    <a href="#">
+                        <img src="http://www.seriouseats.com/assets_c/2017/02/20170215-pork-rillettes-01-thumb-625xauto-436465.jpg">
+                        <h4 class="stext">How to Make Pork Rillettes:Party Food That's Fancy and Easy</h4>
+                        <h6 class="stext">J. KENJI LOPEZ-ALT</h6>
+                    </a>
+                </div>
             </div>
-            <p class="morebox"><a href="cs.html">MORE TECHNIQUES</a></p>
+            <div class="morebox"><a href="../cs/cs.html">MORE TECHNIQUES</a></div>
         </div>
 
         <div id="videos" style="background-color: darkslategray;">

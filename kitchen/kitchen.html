@@ -24,14 +24,14 @@ Filename: template.html
     <!--Logo and menu-->
     <nav id="heading">
         <div class="topnav" id="myTopnav">
-            <a href="../hompage/homepage.html">
+            <a href="../homepage/homepage.html">
                 <img src="../main/FoodBlissLogo.png" alt="logo" style="padding:0px; width:58px;" />
             </a>
-            <a href="../recipe/recipe.html">RECIPE</a>
-            <a href="../cs/cs.html">TIPS &amp; GUIDELINES</a>
-            <a href="kitchen.html">KITCHEN ESSENTIALS</a>
-            <a href="../cs/cs.html">ABOUT US</a>
-            <a href="../cs/cs.html">OTHERS</a>
+            <a id="recipe" href="../recipe/recipe.html">RECIPE</a>
+            <a id="tips" href="../tips/tips.html">TIPS &amp; GUIDELINES</a>
+            <a id="kitchen" href="kitchen.html">KITCHEN ESSENTIALS</a>
+            <a id="about" href="../about/about.html">ABOUT US</a>
+            <a id="other" href="../other/other.html">OTHERS</a>
             <input type="text" name="search" placeholder="Search.." class="searchbar">
             <a href="javascript:void(0);" class="icon" onclick="dispH()">&#9776;</a>
         </div>
@@ -45,15 +45,31 @@ Filename: template.html
                     x.className = "topnav";
                 }
             }
+            var x = location.href;
+            if (x.includes("recipe")) {
+                document.getElementById("recipe").style.backgroundColor = "red";
+            }
+            if (x.includes("tips")) {
+                document.getElementById("tips").style.backgroundColor = "red";
+            }
+            if (x.includes("kitchen")) {
+                document.getElementById("kitchen").style.backgroundColor = "red";
+            }
+            if (x.includes("about")) {
+                document.getElementById("about").style.backgroundColor = "red";
+            }
+            if (x.includes("other")) {
+                document.getElementById("other").style.backgroundColor = "red";
+            }
+
         </script>
     </nav>
 
     <section id="pageContent">
-        <h1>KITCHEN ESSENTIALS</h1>
         <div class="catmenu" id="myCatmenu">
             <a href="../cs/cs.html">
                 <div>
-                    <img src="icon/baking_equip.jpg" />
+                    <img src="icon/baking_equip.png" />
                 </div>
                 <span>BAKING EQUIPMENT</span>
             </a>
@@ -67,7 +83,7 @@ Filename: template.html
                 <div>
                     <img src="icon/cookware.png" />
                 </div>
-                <span>COOKWARE</span>
+                <span>COOKWARE<br/>&nbsp;</span>
             </a>
             <a href="../cs/cs.html">
                 <div>
@@ -79,7 +95,7 @@ Filename: template.html
                 <div>
                     <img src="icon/knifes.png" />
                 </div>
-                <span>KNIVES</span>
+                <span>KNIVES<br/>&nbsp;</span>
             </a>
             <a href="../cs/cs.html">
                 <div>
@@ -91,10 +107,69 @@ Filename: template.html
                 <div>
                     <img src="icon/serving.png" />
                 </div>
-                <span>SERVING</span>
+                <span>SERVING<br/>&nbsp;</span>
             </a>
         </div>
-        <div id="kitchen">
+        <div>
+            <h1>ESSENTIALS FOR YOUR KITCHEN</h1>
+            <div class="grid">
+                <div class="square">
+                    <a href="http://www.amazon.com/dp/B00004S7V8/?tag=se-kitchen-essentials-20">
+                        <img src="http://static.seriouseats.com/1/dorado/live/images/microplane-classic-zester-grater.jpg">
+                        <h4 class="stext">Microplane Grater/Zester</h4>
+                        <h6 class="stext">RM11.95</h6>
+                    </a>
+                </div>
+                <div class="square">
+                    <a href="http://www.amazon.com/dp/B007R2E47Y/?tag=se-kitchen-essentials-20">
+                        <img src="http://static.seriouseats.com/1/dorado/live/images/all-clad-kz750d-stainless-steel-immersion-blender.jpg">
+                        <h4 class="stext">Hand Blender</h4>
+                        <h6 class="stext">RM99.95</h6>
+                    </a>
+                </div>
+                <div class="square">
+                    <a href="http://www.amazon.com/dp/B000XSZ7SE/?tag=se-kitchen-essentials-20">
+                        <img src="http://static.seriouseats.com/1/dorado/live/images/misono-ux10-santoku-18cm.jpg">
+                        <h4 class="stext">Awesome Chef's Knife</h4>
+                        <h6 class="stext">RM165.05</h6>
+                    </a>
+                </div>
+                <div class="square">
+                    <a href="http://www.amazon.com/dp/B00004S7V8/?tag=se-kitchen-essentials-20">
+                        <img src="http://static.seriouseats.com/1/dorado/live/images/oxo-good-grips-3-piece-angled-measuring-cup-set.jpg">
+                        <h4 class="stext">Liquid Measuring Cups</h4>
+                        <h6 class="stext">RM19.95</h6>
+                    </a>
+                </div>
+                <div class="square">
+                    <a href="http://www.amazon.com/dp/B00004S7V8/?tag=se-kitchen-essentials-20">
+                        <img src="http://static.seriouseats.com/1/dorado/live/images/pyrex-glass-bakeware-pie-plate-9-12.jpg">
+                        <h4 class="stext">9-Inch Glass Pie Plates</h4>
+                        <h6 class="stext">RM7.59</h6>
+                    </a>
+                </div>
+                <div class="square">
+                    <a href="http://www.amazon.com/dp/B00004S7V8/?tag=se-kitchen-essentials-20">
+                        <img src="http://static.seriouseats.com/1/dorado/live/images/kitchenaid-ksm150pser-artisan-stand-mixer-5-quarts.jpg">
+                        <h4 class="stext">KitchenAid Pro Stand Mixer</h4>
+                        <h6 class="stext">RM349.00</h6>
+                    </a>
+                </div>
+                <div class="square">
+                    <a href="http://www.amazon.com/dp/B00004S7V8/?tag=se-kitchen-essentials-20">
+                        <img src="http://static.seriouseats.com/1/dorado/live/images/ateco-20-inch-maple-french-rolling-pin.jpg">
+                        <h4 class="stext">Rolling Pin</h4>
+                        <h6 class="stext">RM10.78</h6>
+                    </a>
+                </div>
+                <div class="square">
+                    <a href="http://www.amazon.com/dp/B00004S7V8/?tag=se-kitchen-essentials-20">
+                        <img src="http://static.seriouseats.com/1/dorado/live/images/unicorn-magnum-pepper-mill.jpg">
+                        <h4 class="stext">Unicorn Magnum Pepper Mill</h4>
+                        <h6 class="stext">RM36.90</h6>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
