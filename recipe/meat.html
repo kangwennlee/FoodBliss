@@ -13,25 +13,25 @@ Filename: template.html
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--Main CSS -->
-    <link href="main/main.css" type="text/css" rel="stylesheet" />
+    <link href="../main/main.css" type="text/css" rel="stylesheet" />
     <!--google font-->
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <!--Include ur css for this page here-->
-    <link type="text/css" href="main/main.css" rel="stylesheet">
+    <link type="text/css" href="template.css" rel="stylesheet">
 </head>
 
 <body>
     <!--Logo and menu-->
     <nav id="heading">
         <div class="topnav" id="myTopnav">
-            <a href="homepage.html">
-                <img src="main/FoodBlissLogo.png" alt="logo" style="padding:0px; width:58px;" />
+            <a href="../hompage/homepage.html">
+                <img src="../main/FoodBlissLogo.png" alt="logo" style="padding:0px; width:58px;" />
             </a>
-            <a href="cs.html">RECIPE</a>
-            <a href="cs.html">TIPS &amp; GUIDELINES</a>
-            <a href="cs.html">KITCHEN ESSENTIALS</a>
-            <a href="cs.html">ABOUT US</a>
-            <a href="cs.html">OTHERS</a>
+            <a href="../cs/cs.html">RECIPE</a>
+            <a href="../cs/cs.html">TIPS &amp; GUIDELINES</a>
+            <a href="../cs/cs.html">KITCHEN ESSENTIALS</a>
+            <a href="../cs/cs.html">ABOUT US</a>
+            <a href="../cs/cs.html">OTHERS</a>
             <input type="text" name="search" placeholder="Search.." class="searchbar">
             <a href="javascript:void(0);" class="icon" onclick="dispH()">&#9776;</a>
         </div>
@@ -45,17 +45,29 @@ Filename: template.html
                     x.className = "topnav";
                 }
             }
+
         </script>
     </nav>
 
     <section id="pageContent">
-
+        <div id="chicken">
+            <h1>MEAT</h1>
+            <div class="grid">
+                <div class="square">
+                    <a href="http ://www.seriouseats.com/2017/03/how-to-make-venetian-radicchio-risotto.html">
+                        <img src="../hompage/ct/20170111-radicchio-risotto-vicky-wasik-16.jpg">
+                        <h4 class="stext">Radicchio Adds Color and Complexity to Classic Risotto</h4>
+                        <h6 class="stext">DANIEL GRITZER</h6>
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer id="footer">
         <p id="flogo">
-            <a href="homepage.html">
-                <img src="main/FoodBlissLogo.png" alt="flogo" />
+            <a href="../hompage/homepage.html">
+                <img src="../main/FoodBlissLogo.png" alt="flogo" />
             </a>
         </p>
         <p id="scicon">

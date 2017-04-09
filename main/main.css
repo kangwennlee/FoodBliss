@@ -7,7 +7,7 @@ Filename: main.css
 
 body {
     font-family: 'Lato';
-    background-color: lightgray;
+    background-color: rgb(242, 242, 242);
 }
 
 
@@ -180,8 +180,33 @@ FOOTER
     color: white;
 }
 
+.catmenu {
+    width: 100%;
+    text-align: center;
+}
+
+.catmenu a {
+    display: inline-block;
+    margin-left: 3%;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.catmenu a:hover {
+    color: red;
+}
+
+.catmenu img {
+    width: 80px;
+}
+
 
 /*Grid Css*/
+
+h1 {
+    text-align: center;
+}
 
 .grid {
     width: 1400px;

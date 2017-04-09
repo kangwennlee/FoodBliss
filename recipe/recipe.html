@@ -13,25 +13,25 @@ Filename: template.html
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--Main CSS -->
-    <link href="main/main.css" type="text/css" rel="stylesheet" />
+    <link href="../main/main.css" type="text/css" rel="stylesheet" />
     <!--google font-->
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <!--Include ur css for this page here-->
-    <link type="text/css" href="recipe/recipe.css" rel="stylesheet">
+    <link type="text/css" href="recipe.css" rel="stylesheet">
 </head>
 
 <body>
     <!--Logo and menu-->
-    <div id="heading">
+    <nav id="heading">
         <div class="topnav" id="myTopnav">
-            <a href="homepage.html">
-                <img src="main/FoodBlissLogo.png" alt="logo" style="padding:0px; width:58px;" />
+            <a href="../hompage/homepage.html" s>
+                <img src="../main/FoodBlissLogo.png" alt="logo" style="padding:0px; width:58px;" />
             </a>
-            <a href="cs.html">RECIPE</a>
-            <a href="cs.html">TIPS &amp; GUIDELINES</a>
-            <a href="cs.html">KITCHEN ESSENTIALS</a>
-            <a href="cs.html">ABOUT US</a>
-            <a href="cs.html">OTHERS</a>
+            <a href="recipe.html">RECIPE</a>
+            <a href="../cs/cs.html">TIPS &amp; GUIDELINES</a>
+            <a href="../cs/cs.html">KITCHEN ESSENTIALS</a>
+            <a href="../cs/cs.html">ABOUT US</a>
+            <a href="../cs/cs.html">OTHERS</a>
             <input type="text" name="search" placeholder="Search.." class="searchbar">
             <a href="javascript:void(0);" class="icon" onclick="dispH()">&#9776;</a>
         </div>
@@ -47,39 +47,51 @@ Filename: template.html
             }
 
         </script>
-    </div>
+    </nav>
 
-    <div id="pageContent">
+    <section id="pageContent">
         <div class="catmenu" id="myCatmenu">
-            <a href="cs.html">
+            <a href="meat.html">
                 <div>
-                    <img src="recipe/chicken.png" />
+                    <img src="icon/meat.png" />
                 </div>
                 <span>MEAT</span>
             </a>
-            <a href="cs.html">
+            <a href="../cs/cs.html">
                 <div>
-                    <img src="recipe/pizza.png" />
+                    <img src="icon/pizza.ico" />
                 </div>
                 <span>PIZZA</span>
             </a>
-            <a href="cs.html">
+            <a href="../cs/cs.html">
                 <div>
-                    <img src="recipe/pasta.png" />
+                    <img src="icon/pasta.ico" />
                 </div>
                 <span>PASTA</span>
             </a>
-            <a href="cs.html">
+            <a href="../cs/cs.html">
                 <div>
-                    <img src="recipe/salad.png" />
+                    <img src="icon/appetizer.png" />
                 </div>
                 <span>APPETIZER</span>
             </a>
-            <a href="cs.html">
+            <a href="../cs/cs.html">
                 <div>
-                    <img src="recipe/burger.png" />
+                    <img src="icon/burger_sandwishes.png" />
                 </div>
                 <span>BURGER</span>
+            </a>
+            <a href="../cs/cs.html">
+                <div>
+                    <img src="icon/desserts.png" />
+                </div>
+                <span>DESSERTS</span>
+            </a>
+            <a href="../cs/cs.html">
+                <div>
+                    <img src="icon/drinks.png" />
+                </div>
+                <span>DRINKS</span>
             </a>
         </div>
         <div id="latest">
@@ -87,21 +99,21 @@ Filename: template.html
             <div class="grid">
                 <div class="square">
                     <a href="http ://www.seriouseats.com/2017/03/how-to-make-venetian-radicchio-risotto.html">
-                        <img src="hompage/ct/20170111-radicchio-risotto-vicky-wasik-16.jpg">
+                        <img src="../hompage/ct/20170111-radicchio-risotto-vicky-wasik-16.jpg">
                         <h4 class="stext">Radicchio Adds Color and Complexity to Classic Risotto</h4>
                         <h6 class="stext">DANIEL GRITZER</h6>
                     </a>
                 </div>
                 <div class="square">
                     <a href="http ://www.seriouseats.com/2017/03/how-to-make-venetian-radicchio-risotto.html">
-                        <img src="hompage/ct/20170111-radicchio-risotto-vicky-wasik-16.jpg">
+                        <img src="../hompage/ct/20170111-radicchio-risotto-vicky-wasik-16.jpg">
                         <h4 class="stext">Radicchio Adds Color and Complexity to Classic Risotto</h4>
                         <h6 class="stext">DANIEL GRITZER</h6>
                     </a>
                 </div>
                 <div class="square">
                     <a href="http ://www.seriouseats.com/2017/03/how-to-make-venetian-radicchio-risotto.html">
-                        <img src="hompage/ct/20170111-radicchio-risotto-vicky-wasik-16.jpg">
+                        <img src="../hompage/ct/20170111-radicchio-risotto-vicky-wasik-16.jpg">
                         <h4 class="stext">Radicchio Adds Color and Complexity to Classic Risotto</h4>
                         <h6 class="stext">DANIEL GRITZER</h6>
                     </a>
@@ -176,12 +188,12 @@ Filename: template.html
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div id="footer">
+    <footer id="footer">
         <p id="flogo">
             <a href="homepage.html">
-                <img src="main/FoodBlissLogo.png" alt="flogo" />
+                <img src="../main/FoodBlissLogo.png" alt="flogo" />
             </a>
         </p>
         <p id="scicon">
@@ -193,7 +205,7 @@ Filename: template.html
             <a href="#" class="fa fa-rss"></a>
         </p>
         <p>&copy 2017 Food Bliss.</p>
-    </div>
+    </footer>
 
 </body>
 
