@@ -184,7 +184,7 @@ FOOTER
 /*Grid Css*/
 
 .grid {
-    width: 999px;
+    width: 1400px;
     margin: auto;
 }
 
@@ -255,6 +255,9 @@ FOOTER
 /* On smaller screens, decrease text size, width,margin on .square and video */
 
 @media only screen and (max-width: 1758px) {
+    .grid {
+        width: 999px;
+    }
     /*    Video*/
     .gridVideo {
         width: 854px;
