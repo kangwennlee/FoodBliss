@@ -32,10 +32,22 @@ Filename: template.html
             <a id="kitchen" href="../kitchen/kitchen.html">KITCHEN ESSENTIALS</a>
             <a id="about" href="../about/about.html">ABOUT US</a>
             <a id="other" href="../other/other.html">OTHERS</a>
-            <input type="text" name="search" placeholder="Search.." class="searchbar">
+            <input type="text" name="search" placeholder="Search.." class="searchbar" id="searchbar" />
             <a href="javascript:void(0);" class="icon" onclick="dispH()">&#9776;</a>
         </div>
+
         <script>
+            document.getElementById("searchbar")
+                .addEventListener("keyup", function(event) {
+                    event.preventDefault();
+                    if (event.keyCode == 13) {
+                        redirect();
+                    }
+                });
+
+            function redirect() {
+                window.location.replace("../cs/cs.html");
+            }
             // For the menu to display vertically instead horizontally
             function dispH() {
                 var x = document.getElementById("myTopnav");
@@ -82,12 +94,12 @@ Filename: template.html
                 <li>Aromatics in the poaching liquid create a flavorful broth that can be enjoyed on its own.</li>
             </ul>
             <hr/>
-            <div id="cooktime">
-                <p>YIELD:<br/>Serves 4 to 6
+            <div class="cooktime">
+                <p><span style="font-weight:bold;">YIELD:</span><br/>Serves 4 to 6
                 </p>
-                <p>ACTIVE TIME: <br/>1 hour
+                <p><span style="font-weight:bold;">ACTIVE TIME:</span><br/>1 hour
                 </p>
-                <p>TOTAL TIME:<br/>1 hour 15 minutes
+                <p><span style="font-weight:bold;">TOTAL TIME:</span><br/>1 hour 15 minutes
                 </p>
             </div>
             <hr/>
@@ -128,10 +140,33 @@ Filename: template.html
                 <li>About 1 hour before serving, allow dressing to come to room temperature. Before serving, use a whisk or electric mixer to whip cream in a large metal bowl until soft peaks form. Fold whipped cream into dressing to suit your taste.</li>
                 <li><span style="font-weight:bold;">To Serve:</span> Slice warm or room-temperature chicken breasts against the grain. Spoon some sauce onto a large platter. Arrange chicken on top of sauce and arrange warm or room-temperature buttered asparagus around chicken. Spoon more sauce over chicken. Season with salt and pepper and garnish with minced fresh chives. If you prefer, you can also serve on individual plates. Serve any extra green goddess sauce on the side.</li>
             </ol>
+            <hr/>
+            <h1>SPECIAL EQUIPMENT</h1>
+            <p><a href="" class="recipelink">Blender</a> or <a href="" class="recipelink">food processor</a>, <a href="" class="recipelink">instant-read thermometer</a></p>
+            <h1>THIS RECIPE APPEARS IN</h1>
+            <p><a href="chicken2.html" class="recipelink">The Canal House Perfect Bite: Poach Your Chicken and Asparagus for a Light, Easy Meal</a></p>
+        </div>
+        <hr/>
+        <p id="profile">
+            <img src="http://www.seriouseats.com/mt-static/support/assets_c/userpics/userpic-1260276-100x100.png" /> CANAL HOUSE CONTRIBUTORS
+        </p>
+        <p>Canal House is a culinary, photography, and design studio operated by Christopher Hirsheimer and Melissa Hamilton. They are home cooks who write about home cooking for other home cooks. Together, they collaborate on Canal House Cooking, a series of seasonal cookbooks for which they do all the writing, recipes, photography, design, and production. They were the recipients of the 2013 James Beard Foundation award in the General Cooking category for their cookbook, Canal House Cooks Every Day (Andrews McMeel, 2012), and were nominees for their Bon Appétit video series, "The Seasonal Cooks," as well as 2013 IACP nominees for Photography and Food Styling. Their next book, Cook Something (Little, Brown), will be available fall 2017.</p>
+        <div id="commentbox">
+            <h1>5 COMMENTS</h1>
+            <div class="comment">
+                <span>cookbot 4:39PM on 03/22/17</span>
+                <p>I used to work in a restaurant that did something similar with Louis Dressing for seafood salads -- i.e., made a standard Louis and then moussed it up with just a bit of whipped cream. Really poshed it up; bet it would work great with Green Goddess too.</p>
+            </div>
+
+            <div>flowergarden129 5:49PM on 03/22/17</div>
+            <p>This sounds like a perfect recipe to sous vide, with a smaller amount of poaching liquid included in each individual bag. It would make holding the chicken at the right temperature for the hour very easy.</p>
+            <div>FlavorCountry 11:00PM on 03/22/17</div>
+            <p>Y'all shoulda left the country fried chicken on the headliner. Are y'all actually getting that many more page clicks from pseudo vegan health yuppies to put boiled chicken on top?</p>
         </div>
     </section>
 
     <footer id="footer">
+        <hr/>
         <p id="flogo">
             <a href="../homepage/homepage.html">
                 <img src="../main/FoodBlissLogo.png" alt="flogo" />

@@ -6,7 +6,7 @@
 Food Bliss
 Author: Lee Kang Wenn, Yang Poh Yee, Chan Peck Hui
 Date: 23/03/2017
-Filename: template.html
+Filename: tips.html
 -->
     <title>Food Bliss</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,25 +17,37 @@ Filename: template.html
     <!--google font-->
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <!--Include ur css for this page here-->
-    <link type="text/css" href="template.css" rel="stylesheet">
+    <link type="text/css" href="tips.css" rel="stylesheet">
 </head>
 
 <body>
     <!--Logo and menu-->
     <nav id="heading">
         <div class="topnav" id="myTopnav">
-            <a href="../homepage/homepage.html">
+            <a href="../homepage/homepage.html" s>
                 <img src="../main/FoodBlissLogo.png" alt="logo" style="padding:0px; width:58px;" />
             </a>
             <a id="recipe" href="../recipe/recipe.html">RECIPE</a>
-            <a id="tips" href="../tips/tips.html">TIPS &amp; GUIDELINES</a>
+            <a id="tips" href="tips.html">TIPS &amp; GUIDELINES</a>
             <a id="kitchen" href="../kitchen/kitchen.html">KITCHEN ESSENTIALS</a>
             <a id="about" href="../about/about.html">ABOUT US</a>
             <a id="other" href="../other/other.html">OTHERS</a>
-            <input type="text" name="search" placeholder="Search.." class="searchbar">
+            <input type="text" name="search" placeholder="Search.." class="searchbar" id="searchbar" />
             <a href="javascript:void(0);" class="icon" onclick="dispH()">&#9776;</a>
         </div>
+
         <script>
+            document.getElementById("searchbar")
+                .addEventListener("keyup", function(event) {
+                    event.preventDefault();
+                    if (event.keyCode == 13) {
+                        redirect();
+                    }
+                });
+
+            function redirect() {
+                window.location.replace("../cs/cs.html");
+            }
             // For the menu to display vertically instead horizontally
             function dispH() {
                 var x = document.getElementById("myTopnav");
@@ -45,6 +57,7 @@ Filename: template.html
                     x.className = "topnav";
                 }
             }
+
             var x = location.href;
             if (x.includes("recipe")) {
                 document.getElementById("recipe").style.backgroundColor = "red";
@@ -61,26 +74,165 @@ Filename: template.html
             if (x.includes("other")) {
                 document.getElementById("other").style.backgroundColor = "red";
             }
+
         </script>
     </nav>
 
     <section id="pageContent">
-
+        <div class="catmenu" id="myCatmenu">
+            <a href="essentials.html">
+                <div>
+                    <img src="icon/esseentials.png" />
+                </div>
+                <span>ESSENTIALS<br/>&nbsp;</span>
+            </a>
+            <a href="../cs/cs.html">
+                <div>
+                    <img src="icon/braising.ico" />
+                </div>
+                <span>BRAISING<br/>&nbsp;</span>
+            </a>
+            <a href="../cs/cs.html">
+                <div>
+                    <img src="icon/baking.png" />
+                </div>
+                <span>BAKING<br/>&nbsp;</span>
+            </a>
+            <a href="../cs/cs.html">
+                <div>
+                    <img src="icon/knife_skills.png" />
+                </div>
+                <span>KNIFE SKILLS<br/>&nbsp;</span>
+            </a>
+            <a href="../cs/cs.html">
+                <div>
+                    <img src="icon/pressure_cooker.png" />
+                </div>
+                <span>PRESSURE COOKER</span>
+            </a>
+            <a href="../cs/cs.html">
+                <div>
+                    <img src="icon/wok_skills.png" />
+                </div>
+                <span>WOK SKILLS<br/>&nbsp;</span>
+            </a>
+            <a href="../cs/cs.html">
+                <div>
+                    <img src="icon/sous_vide.png" />
+                </div>
+                <span>SOUS VIDE<br/>&nbsp;</span>
+            </a>
+        </div>
+        <div id="latest">
+            <h1>THE LATEST</h1>
+            <div class="grid">
+                <div class="square">
+                    <a href="#">
+                        <img src="http://www.seriouseats.com/assets_c/2017/03/20170224-pressure-cooker-chicken-stock-vicky-wasik-1-thumb-625xauto-436936.jpg">
+                        <h4 class="stext">How to Make Pressure Cooker Chicken Stock</h4>
+                        <h6 class="stext">DANIEL GRITZER</h6>
+                    </a>
+                </div>
+                <div class="square">
+                    <a href="#">
+                        <img src="http://www.seriouseats.com/assets_c/2017/03/20170327-deviled-eggs-canal-house-11-thumb-625xauto-437054.jpg">
+                        <h4 class="stext">One Master Deviled Egg Recipe, Endless Option</h4>
+                        <h6 class="stext">CANAL HOUSE</h6>
+                    </a>
+                </div>
+                <div class="square">
+                    <a href="#">
+                        <img src="http://www.seriouseats.com/assets_c/2017/03/Stir_Fried_Lo_Mein_20170315_1-edit-thumb-625xauto-436986.jpg">
+                        <h4 class="stext">Add a Rainbow of Vegetables to Your Weeknight Stir-Fry</h4>
+                        <h6 class="stext">EMILY AND MATT CLIFTON</h6>
+                    </a>
+                </div>
+                <div class="square">
+                    <a href="#">
+                        <img src="http://www.seriouseats.com/assets_c/2014/07/20140714-stir-fry-fish-fillet-shao-zhong-9-thumb-625xauto-408029.jpg">
+                        <h4 class="stext">Chinese Velveting 101: Stir-Fried Cod with Yellow Squash and Asparagus</h4>
+                        <h6 class="stext">SHAO Z.</h6>
+                    </a>
+                </div>
+                <div class="square">
+                    <a href="#">
+                        <img src="http://www.seriouseats.com/assets_c/2015/04/20150413-cashew-chicken-ding-shao-zhong-17-thumb-625xauto-421972.jpg">
+                        <h4 class="stext">How to Make the Best Cashew Chicken at Home<br/>&nbsp;</h4>
+                        <h6 class="stext">SHAO Z.</h6>
+                    </a>
+                </div>
+                <div class="square">
+                    <a href="#">
+                        <img src="http://www.seriouseats.com/assets_c/2017/01/20161101-chocolate-cream-pie-vicky-wasik-6-thumb-625xauto-435930.jpg">
+                        <h4 class="stext">Brave Tart's Ultimate Guide to Sous Vide Desserts<br/>&nbsp;</h4>
+                        <h6 class="stext">STELLA PARKS</h6>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="knife_skills">
+            <h1>Knife Skills</h1>
+            <div class="grid">
+                <div class="square">
+                    <a href="#">
+                        <img src="http://www.seriouseats.com/assets_c/2017/02/20170210-knife-skills-cauliflower-07-thumb-625xauto-436390.jpg">
+                        <h4 class="stext">Knife Skills: How to Cut Cauliflower Into Florets<br/>&nbsp;</h4>
+                        <h6 class="stext">J. KENJI LÓPEZ-ALT</h6>
+                    </a>
+                </div>
+                <div class="square">
+                    <a href="#">
+                        <img src="http://www.seriouseats.com/assets_c/2016/12/20151118-spaghetti-carbonara-vicky-wasik-2-thumb-625xauto-435541.jpg">
+                        <h4 class="stext">Freeze Bacon and Pancetta for Easier Slicing and Dicing<br/>&nbsp;</h4>
+                        <h6 class="stext">DANIEL GRITZER</h6>
+                    </a>
+                </div>
+                <div class="square">
+                    <a href="#">
+                        <img src="http://www.seriouseats.com/assets_c/2016/10/20161003-peeling-tomato-primary-thumb-625xauto-434395.jpg">
+                        <h4 class="stext">Knife Skills: The Best Ways to Peel and Dice Tomatoes<br/>&nbsp;</h4>
+                        <h6 class="stext">J. KENJI LÓPEZ-ALT</h6>
+                    </a>
+                </div>
+                <div class="square">
+                    <a href="#">
+                        <img src="http://www.seriouseats.com/assets_c/2015/05/20140427-sous-vide-steak-guide-food-lab-12-thumb-625xauto-422780.jpg">
+                        <h4 class="stext">How to Cut a Whole Strip Into Steaks<br/>&nbsp;<br/>&nbsp;</h4>
+                        <h6 class="stext">J. KENJI LÓPEZ-ALT</h6>
+                    </a>
+                </div>
+                <div class="square">
+                    <a href="#">
+                        <img src="http://www.seriouseats.com/assets_c/2015/08/20150813-peeling-tomatoes-vicky-wasik-8-thumb-625xauto-425910.jpg">
+                        <h4 class="stext">How to Peel Tomatoes<br/>&nbsp;<br/>&nbsp;</h4>
+                        <h6 class="stext">DANIEL GRITZER</h6>
+                    </a>
+                </div>
+                <div class="square">
+                    <a href="#">
+                        <img src="http://www.seriouseats.com/assets_c/2015/03/20150320-artichoke-prep-vicky-wasik-5-thumb-625xauto-420872.jpg">
+                        <h4 class="stext">Knife Skills: How to Clean, Trim and Prepare Artichokes<br/>&nbsp;</h4>
+                        <h6 class="stext">DANIEL GRITZER</h6>
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer id="footer">
-        <p id="flogo">
-            <a href="../homepage/homepage.html">
-                <img src="../main/FoodBlissLogo.png" alt="flogo" />
+        <hr/>
+        <p id=" flogo ">
+            <a href="homepage.html ">
+                <img src="../main/FoodBlissLogo.png " alt="flogo " />
             </a>
         </p>
-        <p id="scicon">
+        <p id="scicon ">
             <!-- Add font awesome icons -->
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-twitter"></a>
-            <a href="#" class="fa fa-instagram"></a>
-            <a href="#" class="fa fa-youtube"></a>
-            <a href="#" class="fa fa-rss"></a>
+            <a href="# " class="fa fa-facebook "></a>
+            <a href="# " class="fa fa-twitter "></a>
+            <a href="# " class="fa fa-instagram "></a>
+            <a href="# " class="fa fa-youtube "></a>
+            <a href="# " class="fa fa-rss "></a>
         </p>
         <p>&copy 2017 Food Bliss.</p>
     </footer>

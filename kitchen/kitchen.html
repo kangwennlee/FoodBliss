@@ -32,10 +32,22 @@ Filename: template.html
             <a id="kitchen" href="kitchen.html">KITCHEN ESSENTIALS</a>
             <a id="about" href="../about/about.html">ABOUT US</a>
             <a id="other" href="../other/other.html">OTHERS</a>
-            <input type="text" name="search" placeholder="Search.." class="searchbar">
+            <input type="text" name="search" placeholder="Search.." class="searchbar" id="searchbar" />
             <a href="javascript:void(0);" class="icon" onclick="dispH()">&#9776;</a>
         </div>
+
         <script>
+            document.getElementById("searchbar")
+                .addEventListener("keyup", function(event) {
+                    event.preventDefault();
+                    if (event.keyCode == 13) {
+                        redirect();
+                    }
+                });
+
+            function redirect() {
+                window.location.replace("../cs/cs.html");
+            }
             // For the menu to display vertically instead horizontally
             function dispH() {
                 var x = document.getElementById("myTopnav");
@@ -174,6 +186,7 @@ Filename: template.html
     </section>
 
     <footer id="footer">
+        <hr/>
         <p id="flogo">
             <a href="../hompage/homepage.html">
                 <img src="../main/FoodBlissLogo.png" alt="flogo" />

@@ -24,7 +24,7 @@ Filename: template.html
     <!--Logo and menu-->
     <nav id="heading">
         <div class="topnav" id="myTopnav">
-            <a href="../homepage/homepage.html" s>
+            <a href="../homepage/homepage.html">
                 <img src="../main/FoodBlissLogo.png" alt="logo" style="padding:0px; width:58px;" />
             </a>
             <a id="recipe" href="recipe.html">RECIPE</a>
@@ -32,10 +32,22 @@ Filename: template.html
             <a id="kitchen" href="../kitchen/kitchen.html">KITCHEN ESSENTIALS</a>
             <a id="about" href="../about/about.html">ABOUT US</a>
             <a id="other" href="../other/other.html">OTHERS</a>
-            <input type="text" name="search" placeholder="Search.." class="searchbar">
+            <input type="text" name="search" placeholder="Search.." class="searchbar" id="searchbar" />
             <a href="javascript:void(0);" class="icon" onclick="dispH()">&#9776;</a>
         </div>
+
         <script>
+            document.getElementById("searchbar")
+                .addEventListener("keyup", function(event) {
+                    event.preventDefault();
+                    if (event.keyCode == 13) {
+                        redirect();
+                    }
+                });
+
+            function redirect() {
+                window.location.replace("../cs/cs.html");
+            }
             // For the menu to display vertically instead horizontally
             function dispH() {
                 var x = document.getElementById("myTopnav");
@@ -62,6 +74,7 @@ Filename: template.html
             if (x.includes("other")) {
                 document.getElementById("other").style.backgroundColor = "red";
             }
+
         </script>
     </nav>
 
@@ -219,6 +232,7 @@ Filename: template.html
     </section>
 
     <footer id="footer">
+        <hr/>
         <p id="flogo">
             <a href="homepage.html">
                 <img src="../main/FoodBlissLogo.png" alt="flogo" />

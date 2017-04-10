@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <!--
+Food Bliss
+Author: Lee Kang Wenn, Yang Poh Yee, Chan Peck Hui
+Date: 23/03/2017
+Filename: template.html
+-->
+    <title>Food Bliss</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Main CSS -->
+    <link href="../main/main.css" type="text/css" rel="stylesheet" />
+    <!--google font-->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <!--Include ur css for this page here-->
+    <link type="text/css" href="tips.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--Logo and menu-->
+    <nav id="heading">
+        <div class="topnav" id="myTopnav">
+            <a href="../homepage/homepage.html">
+                <img src="../main/FoodBlissLogo.png" alt="logo" style="padding:0px; width:58px;" />
+            </a>
+            <a id="recipe" href="../recipe/recipe.html">RECIPE</a>
+            <a id="tips" href="tips.html">TIPS &amp; GUIDELINES</a>
+            <a id="kitchen" href="../kitchen/kitchen.html">KITCHEN ESSENTIALS</a>
+            <a id="about" href="../about/about.html">ABOUT US</a>
+            <a id="other" href="../other/other.html">OTHERS</a>
+            <input type="text" name="search" placeholder="Search.." class="searchbar" id="searchbar" />
+            <a href="javascript:void(0);" class="icon" onclick="dispH()">&#9776;</a>
+        </div>
+
+        <script>
+            document.getElementById("searchbar")
+                .addEventListener("keyup", function(event) {
+                    event.preventDefault();
+                    if (event.keyCode == 13) {
+                        redirect();
+                    }
+                });
+
+            function redirect() {
+                window.location.replace("../cs/cs.html");
+            }
+            // For the menu to display vertically instead horizontally
+            function dispH() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+            var x = location.href;
+            if (x.includes("recipe")) {
+                document.getElementById("recipe").style.backgroundColor = "red";
+            }
+            if (x.includes("tips")) {
+                document.getElementById("tips").style.backgroundColor = "red";
+            }
+            if (x.includes("kitchen")) {
+                document.getElementById("kitchen").style.backgroundColor = "red";
+            }
+            if (x.includes("about")) {
+                document.getElementById("about").style.backgroundColor = "red";
+            }
+            if (x.includes("other")) {
+                document.getElementById("other").style.backgroundColor = "red";
+            }
+
+        </script>
+    </nav>
+
+    <section id="pageContent">
+        <div class="tips">
+            <h1 style="color:black;">Cold-Start Your Way to the Tenderest Poached Chicken</h1>
+            <h4 style="text-align: center;">DANIEL GRITZER</h4>
+            <div>
+                <img src="http://www.seriouseats.com/images/2016/03/20160318-poached-chicken-vicky-wasik-3.jpg" />
+            </div>
+            <br/>
+            <span id="cr">[Photograph: Vicky Wasik]</span>
+            <div id="content">
+
+                <p>&emsp;&emsp;&emsp;According to the USDA, Americans consume an awful lot of chicken each year—we're up to about 90 pounds per person annually.* It's safe to assume that very little of that chicken is poached. I get it. Baked, roasted, braised, and fried chicken are inarguably delicious. Poaching, by comparison, can seem bland. And yet, when done well, poached chicken breast is unsurpassed in its tender texture, juiciness, and clean flavor. Served with simple yet flavorful preparations, like the watercress salad and miso vinaigrette recipe I've developed here, it truly shines.</p>
+
+                <blockquote>* Although, the way some people leave meat on their bones, I'd be willing to wager that the actual amount of chicken eaten is probably half that.</blockquote>
+
+                <p>&emsp;&emsp;&emsp;The question, then, is what the best way to poach chicken is.</p>
+
+                <p>&emsp;&emsp;&emsp;Most recipes have you add the breasts to simmering or boiling liquid, often water with some aromatics added. I've seen some instructions that tell you to simmer the chicken until it's done, and others in which you remove the pot from the heat as soon as the chicken goes into it, then let it stand for 30 or 40 minutes until the chicken is cooked through. I don't love the lack of precision in that latter method—different-sized chicken breasts will cook in different times, and the varying ratio of water to chicken will change the rate at which the water cools, throwing off cooking times even more.</p>
+
+                <p>&emsp;&emsp;&emsp;That leaves the simmer-until-done approach as the best one left to us, but recently, while working on my Italian seafood salad recipe, I started wondering whether I couldn't improve upon the chicken approach using a similar method. In the case of the seafood salad, I cook the shrimp and squid by starting them in a room-temperature broth and slowly increasing the heat to 170°F. At this point, the seafood is perfectly cooked and still incredibly tender, since it's never subjected to the higher temperatures of boiling water that cause toughening. It's a technique that Kenji developed for his shrimp, corn, and tomatillo salad, and one that I use in my shrimp cocktail recipe.</p>
+
+                <p>&emsp;&emsp;&emsp;Why wouldn't a similar technique work for chicken breast? I asked myself. After all, that's essentially what chicken breast cooked sous vide is, except that with sous vide, the chicken is in a plastic bag.</p>
+
+                <p>&emsp;&emsp;&emsp;To test it out, I cooked two bone-in, skin-on chicken breast halves separately in two pots of water that I'd seasoned with salt and flavored with scallion and ginger. I dropped one of them into boiling water, then maintained the simmer until the thickest part of the chicken had reached 150°F on an instant-read thermometer. I added the other to the water while it was still cold, then brought the water up to about 150°F and cooked it until the inside of the chicken had reached the same final temperature; I adjusted the heat to maintain the water's temperature, but wasn't too strict about it—it sometimes hovered up around 160°F, or even a little higher.</p>
+                <div>
+                    <img src="http://www.seriouseats.com/images/2016/03/20160318-poached-chicken-vicky-wasik-1-edit.jpg" />
+                </div>
+                <br />
+                <p>&emsp;&emsp;&emsp;Straight from the water, the differences were visible. The chicken cooked in the simmering water had skin that retracted more, while the gently cooked chicken retained a much more even covering of skin. I could also feel by pressing on the flesh that the simmered chicken was tighter and firmer to the touch than the gently cooked chicken.</p>
+                <div>
+                    <img src="http://www.seriouseats.com/images/2016/03/20160318-poached-chicken-vicky-wasik-2-edit.jpg" />
+                </div>
+                <br />
+                <p>&emsp;&emsp;&emsp;Once sliced, the exposed meat revealed similar results, with the lower-temp sample much tenderer and juicier than the simmered one, though the photos here don't do a good job of conveying that visually. In person, there was no question about which was better.</p>
+
+                <p>&emsp;&emsp;&emsp;The downside of the lower-temp method, of course, is that it takes about twice as long. My chicken breast halves weighed three-quarters of a pound each, and at that weight, the simmered one cooked in 30 minutes (including the time it took to bring the water to a boil), while the low-temperature one took closer to an hour—not a terribly long time if you're prepping other things for dinner while it gradually cooks, but not ideal if you're in a rush.</p>
+
+                <p>&emsp;&emsp;&emsp;You can split the difference, raising the poaching temperature to about 170°F, which is still lower than boiling/simmering water, but not quite as low as 150°F. That shaves some valuable minutes off, while still producing a tenderer piece of meat than simmering does.</p>
+                <div>
+                    <img src="http://www.seriouseats.com/images/2016/03/20160318-poached-chicken-vicky-wasik-4.jpg" />
+                </div>
+                <br />
+                <p>&emsp;&emsp;&emsp;I recommend you give it a try. After all, you've got a lot of chicken left to eat this year, so you might as well work in something different. And don't forget: You end up with flavorful broth as a by-product of the poaching, which means even more variety for your dinner menu.</p>
+                <div>
+                    <img src="http://www.seriouseats.com/images/2016/03/20160318-poached-chicken-vicky-wasik-5.jpg" />
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer id="footer">
+        <hr/>
+        <p id="flogo">
+            <a href="../homepage/homepage.html">
+                <img src="../main/FoodBlissLogo.png" alt="flogo" />
+            </a>
+        </p>
+        <p id="scicon">
+            <!-- Add font awesome icons -->
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-rss"></a>
+        </p>
+        <p>&copy 2017 Food Bliss.</p>
+    </footer>
+
+</body>
+
+</html>

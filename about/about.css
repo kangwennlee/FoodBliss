@@ -1,0 +1,50 @@
+/*
+Food Bliss
+Author: Lee Kang Wenn, Yang Poh Yee, Chan Peck Hui
+Date: 23/03/2017
+Filename: about.css
+*/
+
+#content {
+    width: 960px;
+    margin: auto;
+    line-height: 30px;
+    font-size: 20px;
+}
+
+#sicon {
+    width: 960px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#sicon a {
+    text-decoration: none;
+}
+
+#sicon img {
+    display: inline-block;
+    margin-left: 100px;
+    width: 80px;
+    height: 60px;
+    text-align: center;
+}
+
+#editor {
+    text-align: center;
+}
+
+#editor div img {
+    width: 100px
+}
+
+#editor div {
+    margin-left: 50px;
+    margin-right: 50PX;
+    display: inline-block;
+    text-align: center;
+}
+
+h5 {
+    text-align: center;
+}

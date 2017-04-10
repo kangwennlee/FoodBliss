@@ -17,7 +17,7 @@ Filename: template.html
     <!--google font-->
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <!--Include ur css for this page here-->
-    <link type="text/css" href="template.css" rel="stylesheet">
+    <link type="text/css" href="about.css" rel="stylesheet">
 </head>
 
 <body>
@@ -30,7 +30,7 @@ Filename: template.html
             <a id="recipe" href="../recipe/recipe.html">RECIPE</a>
             <a id="tips" href="../tips/tips.html">TIPS &amp; GUIDELINES</a>
             <a id="kitchen" href="../kitchen/kitchen.html">KITCHEN ESSENTIALS</a>
-            <a id="about" href="../about/about.html">ABOUT US</a>
+            <a id="about" href="about.html">ABOUT US</a>
             <a id="other" href="../other/other.html">OTHERS</a>
             <input type="text" name="search" placeholder="Search.." class="searchbar" id="searchbar" />
             <a href="javascript:void(0);" class="icon" onclick="dispH()">&#9776;</a>
@@ -78,8 +78,63 @@ Filename: template.html
     </nav>
 
     <section id="pageContent">
+        <div class="catmenu" id="myCatmenu">
+            <a href="about.html">
+                <div>
+                    <img src="icon/FoodBlissLogo.png" alt="flogo" />
+                </div>
+                <span>COMPANY REVIEW</span>
+            </a>
+            <a href="connect.html">
+                <div>
+                    <img src="icon/social_facebook_box_blue.png" alt="slogo" />
+                </div>
+                <span>CONNECT WITH US</span>
+            </a>
+        </div>
+        <h1>CONNECT WITH US<br/><br/></h1>
+        <div id="sicon">
+            <a href="#">
+                <img src="icon/fb.png" alt="facebook" />
+            </a>
+            <a href="#">
+                <img src="icon/twitter.png" alt="twitter" />
+            </a>
+            <a href="#">
+                <img src="icon/insta.png" alt="instagram" />
+            </a>
+            <a href="#">
+                <img src="icon/youtube.png" alt="youtube" />
+            </a>
+            <a href="#">
+                <img src="icon/rss.png" alt="rss" />
+            </a>
+
+        </div>
+
+        <h1><br/>OUR EDITOR<br /><br /></h1>
+        <div id="editor">
+            <div>
+                <img src="icon/kw.jpg" alt="kw" />
+                <h5>Kang Wenn</h5>
+            </div>
+
+
+            <div>
+                <img src="icon/gladys.jpg" alt="py" height="100px;" />
+                <h5>Poh Yee</h5>
+            </div>
+
+
+            <div>
+                <img src="icon/buii.jpg" alt="buii" />
+                <h5>Peck Hui</h5>
+            </div>
+
+        </div>
 
     </section>
+    <br /><br />
 
     <footer id="footer">
         <hr/>

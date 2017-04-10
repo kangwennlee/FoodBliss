@@ -15,9 +15,15 @@ Filename: chicken.css
 
 .recipe h1 {
     text-align: left;
-    font-size: 40px;
+    font-size: 30px;
     color: aqua;
     text-shadow: 1px 1px black;
+}
+
+.recipelink {
+    text-decoration: none;
+    color: orangered;
+    font-weight: bold;
 }
 
 #credit {
@@ -36,11 +42,11 @@ Filename: chicken.css
     height: 600px;
 }
 
-#cooktime {
+.cooktime {
     text-align: center;
 }
 
-#cooktime p {
+.cooktime p {
     display: inline-block;
     width: 150px;
     text-align: center;
@@ -52,7 +58,7 @@ Filename: chicken.css
 
 @media only screen and (max-width: 750px) {
     .recipe h1 {
-        font-size: 30px;
+        font-size: 25px;
     }
     .recipe div img {
         width: 100%;
@@ -61,4 +67,18 @@ Filename: chicken.css
     #credit {
         font-size: 10px;
     }
+}
+
+.comment span {
+    width: 100px;
+    display: flex;
+}
+
+.comment p {
+    width: 500px;
+}
+
+.comment {
+    word-wrap: break-word;
+    display: inline-block;
 }
