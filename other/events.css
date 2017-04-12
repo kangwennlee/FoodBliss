@@ -1,0 +1,21 @@
+#event {
+    max-width: 960px;
+    margin: auto;
+    background-color: aliceblue;
+}
+
+h1 {
+    text-decoration: underline;
+}
+
+#event div {
+    text-align: center;
+}
+
+#event img {
+    width: 500px;
+}
+
+p {
+    line-height: 25px;
+}

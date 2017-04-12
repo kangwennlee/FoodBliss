@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <!--
+Food Bliss
+Author: Lee Kang Wenn, Yang Poh Yee, Chan Peck Hui
+Date: 23/03/2017
+Filename: calorie_cal.html
+-->
+    <title>Food Bliss</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Main CSS -->
+    <link href="../main/main.css" type="text/css" rel="stylesheet" />
+    <!--google font-->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <!--events2-->
+    <link href="form.css" type="text/css" rel="stylesheet" />
+
+</head>
+
+
+<body>
+    <!--Logo and menu-->
+    <nav id="heading">
+        <div class="topnav" id="myTopnav">
+            <a href="../homepage/homepage.html">
+                <img src="../main/FoodBlissLogo.png" alt="logo" style="padding:0px; width:58px;" />
+            </a>
+            <a id="recipe" href="../recipe/recipe.html">RECIPE</a>
+            <a id="tips" href="../tips/tips.html">TIPS &amp; GUIDELINES</a>
+            <a id="kitchen" href="../kitchen/kitchen.html">KITCHEN ESSENTIALS</a>
+            <a id="about" href="../about/about.html">ABOUT US</a>
+            <a id="other" href="other.html">OTHERS</a>
+            <input type="text" name="search" placeholder="Search.." class="searchbar" id="searchbar" />
+            <a href="javascript:void(0);" class="icon" onclick="dispH()">&#9776;</a>
+        </div>
+
+        <script>
+            document.getElementById("searchbar")
+                .addEventListener("keyup", function(event) {
+                    event.preventDefault();
+                    if (event.keyCode == 13) {
+                        redirect();
+                    }
+                });
+
+            function redirect() {
+                window.location.replace("../cs/cs.html");
+            }
+            // For the menu to display vertically instead horizontally
+            function dispH() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+            var x = location.href;
+            if (x.includes("recipe")) {
+                document.getElementById("recipe").style.backgroundColor = "red";
+            }
+            if (x.includes("tips")) {
+                document.getElementById("tips").style.backgroundColor = "red";
+            }
+            if (x.includes("kitchen")) {
+                document.getElementById("kitchen").style.backgroundColor = "red";
+            }
+            if (x.includes("about")) {
+                document.getElementById("about").style.backgroundColor = "red";
+            }
+            if (x.includes("other")) {
+                document.getElementById("other").style.backgroundColor = "red";
+            }
+
+        </script>
+    </nav>
+
+    <div id="pageContent">
+        <!--menubar-->
+        <div class="catmenu" id="myCatmenu">
+            <a href="other.html">
+                <div>
+                    <img src="icon/events.jpg" />
+                </div>
+                <span>EVENTS<br/>&nbsp</span>
+            </a>
+            <a href="calorie_chart.html">
+                <div>
+                    <img src="icon/calorie_chart.png" />
+                </div>
+                <span>CALORIE CHART</span>
+            </a>
+            <a href="calorie_cal.html">
+                <div>
+                    <img src="icon/calorie_calculator.png" />
+                </div>
+                <span>CALORIE CALCULATOR</span>
+            </a>
+        </div>
+
+        <br />
+        <br />
+        <!--calculator-->
+        <div id="calculator">
+            <form id="calForm" name="calForm">
+                <legend>CALORIE CALCULATOR</legend>
+
+                <fieldset>
+                    <label>Please fill in the following detail: </label>
+
+                    <div>
+                        <label for="age" class="label">Age: </label>
+                        <input id="age" name="age" type="text" />
+                        <label> years</label>
+                    </div>
+                    <div>
+                        <label class="label">Gender: </label>
+                        <input id="female" name="gender" type="radio" checked="checked" />
+                        <label for="female">female</label>
+                        <input id="male" name="gender" type="radio" />
+                        <label for="male">male</label>
+                    </div>
+                    <div>
+                        <label for="weight" class="label">Weight: </label>
+                        <input id="weight" name="weight" type="text" />
+                        <label> kg</label>
+                    </div>
+                    <div>
+                        <label for="height" class="label">Height: </label>
+                        <input id="height" name="height" type="text" />
+                        <label> cm</label>
+                    </div>
+                    <div>
+                        <label class="label">Exercise Level: </label>
+                        <select id="level" name="level">
+                        <option value="1.2">No exercise</option>
+                        <option value="1.375" selected="selected">Moderate exercise</option>
+                        <option value="1.725">Active exercise</option>
+                  </select>
+                    </div>
+                    <div>
+                        <input id="calBut" type="button" value="Calculate" onclick="count()" />
+                        <input id="reset" type="reset" value="Cancel" />
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Results: </legend>
+                    <div>
+                        <div id="result"></div>
+                    </div>
+                </fieldset>
+                <script>
+                    function testing() {
+                        window.alert(5 + 6);
+                    }
+
+                    function count() {
+                        var age = document.getElementById("age").value;
+                        var weight = document.getElementById("weight").value;
+                        var height = document.getElementById("height").value;
+                        var level = document.getElementById("level").value;
+                        var BMR;
+
+
+                        //if female
+                        if (document.getElementsByName("gender")[0].checked) {
+                            BMR = 10 * weight + 6.25 * height - 5 * age - 161;
+                        } else { //male
+                            BMR = 10 * weight + 6.25 * height - 5 * age + 5;
+                        }
+
+                        var cpd = level * BMR;
+
+                        document.getElementById("result").innerHTML = cpd + " kcal per day"
+                        //                        document.write("Results: your daily calorie requirements is " + cpd);
+                        //                      window.alert(cpd);
+
+                    }
+
+                </script>
+            </form>
+        </div>
+
+    </div>
+    <div id="footer">
+        <br />
+        <p id="flogo">
+            <a href="../homepage/homepage.html">
+                <img src="../main/FoodBlissLogo.png" alt="flogo" />
+            </a>
+        </p>
+        <p id="scicon">
+            <!-- Add font awesome icons -->
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-rss"></a>
+        </p>
+        <p>&copy 2017 Food Bliss.</p>
+    </div>
+
+
+</body>
+
+</html>

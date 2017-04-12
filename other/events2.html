@@ -16,8 +16,9 @@ Filename: template.html
     <link href="../main/main.css" type="text/css" rel="stylesheet" />
     <!--google font-->
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <!--Include ur css for this page here-->
-    <link type="text/css" href="template.css" rel="stylesheet">
+    <!--events2-->
+    <link href="events.css" type="text/css" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -31,7 +32,7 @@ Filename: template.html
             <a id="tips" href="../tips/tips.html">TIPS &amp; GUIDELINES</a>
             <a id="kitchen" href="../kitchen/kitchen.html">KITCHEN ESSENTIALS</a>
             <a id="about" href="../about/about.html">ABOUT US</a>
-            <a id="other" href="../other/other.html">OTHERS</a>
+            <a id="other" href="other.html">OTHERS</a>
             <input type="text" name="search" placeholder="Search.." class="searchbar" id="searchbar" />
             <a href="javascript:void(0);" class="icon" onclick="dispH()">&#9776;</a>
         </div>
@@ -73,18 +74,57 @@ Filename: template.html
             if (x.includes("other")) {
                 document.getElementById("other").style.backgroundColor = "red";
             }
+
         </script>
     </nav>
 
-    <section id="pageContent">
+    <div id="pageContent">
+        <!--menubar-->
+        <div class="catmenu" id="myCatmenu">
+            <a href="other.html">
+                <div>
+                    <img src="icon/events.jpg" />
+                </div>
+                <span>EVENTS<br/>&nbsp</span>
+            </a>
+            <a href="calorie_chart.html">
+                <div>
+                    <img src="icon/calorie_chart.png" />
+                </div>
+                <span>CALORIE CHART</span>
+            </a>
+            <a href="calorie_cal.html">
+                <div>
+                    <img src="icon/calorie_calculator.png" />
+                </div>
+                <span>CALORIE CALCULATOR</span>
+            </a>
+        </div>
 
-    </section>
+        <br />
+        <br />
+        <!--event-->
+        <div id="event">
+            <h1>16 April 2017 - Chocolate Festival</h1>
+            <div><img src="pic/choco.jpg" alt="chocolate festival 2017" /></div>
 
-    <footer id="footer">
-        <hr/>
-        <p>
+            <p>
+                Location: <br />&emsp;Midvalley, 2nd floor<br /> Fees: <br /> &emsp;RM60 per person
+                <br/>
+            </p>
+            <p>Description: <br />&emsp;The Grenada Chocolate Fest celebrates the island’s delicious organic and ethically produced cocoa and chocolate. The festival is a perfect experience for all those who have a passion for chocolate.
+            </p>
+
+            <p>
+                Learn how Grenada’s chocolate artisans craft their famous ethical “tree to bar” products. Take a journey through the island’s rich history and visit cocoa farms nestled in its lush Caribbean rainforest....dance the cocoa or be a cocoa farmer for a day. Jam by the turquoise sea at sunset, and run through a cocoa forest! And when you are ready to relax and unwind, indulge in some authentic chocolate-inspired cuisine and luxuriate in cocoa-infused island life!</p>
+        </div>
+
+    </div>
+
+    <div id="footer">
+        <p id="flogo">
             <a href="../homepage/homepage.html">
-                <img src="../main/FoodBlissLogo.png" alt="flogo" id="flogo" />
+                <img src="../main/FoodBlissLogo.png" alt="flogo" />
             </a>
         </p>
         <p id="scicon">
@@ -96,7 +136,7 @@ Filename: template.html
             <a href="#" class="fa fa-rss"></a>
         </p>
         <p>&copy 2017 Food Bliss.</p>
-    </footer>
+    </div>
 
 </body>
 

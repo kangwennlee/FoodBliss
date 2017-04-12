@@ -1,0 +1,27 @@
+#chart {
+    display: flex;
+    justify-content: center;
+}
+
+table caption{
+    font-size: 20px;
+    text-decoration: underline;
+    margin-bottom:10px;
+}
+
+table th{
+      background-color:cadetblue;
+}
+
+table .group{
+      background-color:darkseagreen;
+}
+
+table td{
+      background-color:floralwhite;
+}
+
+table.chartTable{
+      border-collapse: collapse;
+      border: 2px bold black;
+}

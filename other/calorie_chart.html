@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <!--
+Food Bliss
+Author: Lee Kang Wenn, Yang Poh Yee, Chan Peck Hui
+Date: 23/03/2017
+Filename: template.html
+-->
+    <title>Food Bliss</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Main CSS -->
+    <link href="../main/main.css" type="text/css" rel="stylesheet" />
+    <!--google font-->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <!--events2-->
+    <link href="chart.css" type="text/css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <!--Logo and menu-->
+    <nav id="heading">
+        <div class="topnav" id="myTopnav">
+            <a href="../homepage/homepage.html">
+                <img src="../main/FoodBlissLogo.png" alt="logo" style="padding:0px; width:58px;" />
+            </a>
+            <a id="recipe" href="../recipe/recipe.html">RECIPE</a>
+            <a id="tips" href="../tips/tips.html">TIPS &amp; GUIDELINES</a>
+            <a id="kitchen" href="../kitchen/kitchen.html">KITCHEN ESSENTIALS</a>
+            <a id="about" href="../about/about.html">ABOUT US</a>
+            <a id="other" href="other.html">OTHERS</a>
+            <input type="text" name="search" placeholder="Search.." class="searchbar" id="searchbar" />
+            <a href="javascript:void(0);" class="icon" onclick="dispH()">&#9776;</a>
+        </div>
+
+        <script>
+            document.getElementById("searchbar")
+                .addEventListener("keyup", function(event) {
+                    event.preventDefault();
+                    if (event.keyCode == 13) {
+                        redirect();
+                    }
+                });
+
+            function redirect() {
+                window.location.replace("../cs/cs.html");
+            }
+            // For the menu to display vertically instead horizontally
+            function dispH() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+            var x = location.href;
+            if (x.includes("recipe")) {
+                document.getElementById("recipe").style.backgroundColor = "red";
+            }
+            if (x.includes("tips")) {
+                document.getElementById("tips").style.backgroundColor = "red";
+            }
+            if (x.includes("kitchen")) {
+                document.getElementById("kitchen").style.backgroundColor = "red";
+            }
+            if (x.includes("about")) {
+                document.getElementById("about").style.backgroundColor = "red";
+            }
+            if (x.includes("other")) {
+                document.getElementById("other").style.backgroundColor = "red";
+            }
+
+        </script>
+    </nav>
+
+    <div id="pageContent">
+        <!--menubar-->
+        <div class="catmenu" id="myCatmenu">
+            <a href="other.html">
+                <div>
+                    <img src="icon/events.jpg" />
+                </div>
+                <span>EVENTS<br/>&nbsp</span>
+            </a>
+            <a href="calorie_chart.html">
+                <div>
+                    <img src="icon/calorie_chart.png" />
+                </div>
+                <span>CALORIE CHART</span>
+            </a>
+            <a href="calorie_cal.html">
+                <div>
+                    <img src="icon/calorie_calculator.png" />
+                </div>
+                <span>CALORIE CALCULATOR</span>
+            </a>
+        </div>
+
+        <br />
+        <br />
+        <!--event-->
+        <div id="chart">
+
+            <table id="chartTable" border="1">
+
+                <caption><b>Calorie Chart</b></caption>
+                <thead>
+                    <tr>
+                        <th>Food</th>
+                        <th>Serving Size</th>
+                        <th>Calories/ kcal</th>
+                    </tr>
+                </thead>
+
+
+
+                <tbody>
+                    <tr>
+                        <td colspan="3" class="group">Milk & Milk Products</td>
+                    </tr>
+
+                    <tr>
+                        <td>Sweetened Condensed Milk "cans"</td>
+                        <td>28g</td>
+                        <td>123</td>
+                    </tr>
+                    <tr>
+                        <td>Full cream milk powder</td>
+                        <td>half a cup</td>
+                        <td>635</td>
+                    </tr>
+                    <tr>
+                        <td>Skim milk powder</td>
+                        <td>half a cup</td>
+                        <td>435</td>
+                    </tr>
+                    <tr>
+                        <td>Full-fat chocolate milk</td>
+                        <td>1 cup</td>
+                        <td>208</td>
+                    </tr>
+                    <tr>
+                        <td>Strawberry Milk</td>
+                        <td>1 cup</td>
+                        <td>244</td>
+                    </tr>
+                    <tr>
+                        <td>Cheddar cheese slices</td>
+                        <td>28gm</td>
+                        <td>114</td>
+                    </tr>
+                    <tr>
+                        <td>Kraft Cheese "cups"</td>
+                        <td>28g</td>
+                        <td>80</td>
+                    </tr>
+                    <tr>
+                        <td>Feta cheese</td>
+                        <td>28g</td>
+                        <td>75</td>
+                    </tr>
+                    <tr>
+                        <td>Blue cheese</td>
+                        <td>28g</td>
+                        <td>104</td>
+                    </tr>
+                    <tr>
+                        <td>Ricotta cheese</td>
+                        <td>half a cup</td>
+                        <td>216</td>
+                    </tr>
+                    <tr>
+                        <td>Cocoa</td>
+                        <td>1 ball</td>
+                        <td>280</td>
+                    </tr>
+                </tbody>
+
+                <tr>
+                    <td colspan="3" class="group">Drinks & Juices</td>
+                </tr>
+
+                <tr>
+                    <td>Apple juice</td>
+                    <td>half a cup</td>
+                    <td>60</td>
+                </tr>
+                <tr>
+                    <td>Apricot juice</td>
+                    <td>half a cup</td>
+                    <td>72</td>
+                </tr>
+                <tr>
+                    <td>Fresh orange juice</td>
+                    <td>half a cup</td>
+                    <td>78</td>
+                </tr>
+                <tr>
+                    <td>Grapefruit juice</td>
+                    <td>one cup</td>
+                    <td>58</td>
+                </tr>
+                <tr>
+                    <td>Guava juice</td>
+                    <td>one cup</td>
+                    <td>175</td>
+                </tr>
+                <tr>
+                    <td>Mango juice</td>
+                    <td>one cup</td>
+                    <td>110</td>
+                </tr>
+                <tr>
+                    <td>Vimto juice</td>
+                    <td>34g</td>
+                    <td>165</td>
+                </tr>
+
+                <tr>
+                    <td colspan="3" class="group">Meat & Proteins</td>
+                </tr>
+
+                <tr>
+                    <td>Lamb shoulder</td>
+                    <td>100g</td>
+                    <td>555</td>
+                </tr>
+                <tr>
+                    <td>Lamb thigh</td>
+                    <td>23g</td>
+                    <td>345</td>
+                </tr>
+                <tr>
+                    <td>Lamb rib</td>
+                    <td>45g</td>
+                    <td>288</td>
+                </tr>
+                <tr>
+                    <td>Beef shoulder</td>
+                    <td>48g</td>
+                    <td>473</td>
+                </tr>
+                <tr>
+                    <td>Tuna</td>
+                    <td>37g</td>
+                    <td>273</td>
+                </tr>
+                <tr>
+                    <td>Smoked salmon</td>
+                    <td>37g</td>
+                    <td>230</td>
+                </tr>
+                <tr>
+                    <td>Crab</td>
+                    <td>67g</td>
+                    <td>148</td>
+                </tr>
+                <tr>
+                    <td>Oyster</td>
+                    <td>85g</td>
+                    <td>122</td>
+                </tr>
+                <tr>
+                    <td>Turkey</td>
+                    <td>85g</td>
+                    <td>267</td>
+                </tr>
+                <tr>
+                    <td>Smoked salmon</td>
+                    <td>35g</td>
+                    <td>273</td>
+                </tr>
+                <tr>
+                    <td>Duck meat</td>
+                    <td>25g</td>
+                    <td>148</td>
+                </tr>
+                <tr>
+                    <td>Chicken leg</td>
+                    <td>85g</td>
+                    <td>122</td>
+                </tr>
+
+            </table>
+
+        </div>
+    </div>
+    <div id="footer">
+        <br />
+        <p id="flogo">
+            <a href="../homepage/homepage.html">
+                <img src="../main/FoodBlissLogo.png" alt="flogo" />
+            </a>
+        </p>
+        <p id="scicon">
+            <!-- Add font awesome icons -->
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-rss"></a>
+        </p>
+        <p>&copy 2017 Food Bliss.</p>
+    </div>
+
+
+</body>
+
+</html>

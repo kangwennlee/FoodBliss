@@ -1,4 +1,4 @@
-﻿/*
+/*
    New Perspectives on HTML and XHTML 5th Edition
    Tutorial 5
    Case Problem 2
@@ -12,57 +12,73 @@
 
 */
 
-
-table.calendar{
-	border-collapse:separate;
-	border-spacing:5px;
-	font-size:8px
+table.calendar {
+    width: 960px;
+    border-collapse: separate;
+    border-spacing: 5px;
+    font-size: 8px
 }
 
-table.calendar caption{
-	caption-side:top;
-	text-align:left;
-	font-size:16px;
-	letter-spacing:3px
+table.calendar caption {
+    caption-side: top;
+    text-align: left;
+    font-size: 16px;
+    letter-spacing: 3px
 }
 
-table.calendar col{
-	width:14%
+table.calendar col {
+    width: 14%
 }
 
-table.calendar col.weekends{
-	background-color:rgb(255, 232,232)
+table.calendar col.weekends {
+    background-color: #FFE0D0;
 }
 
-table.calendar thead th{
-	background-color:red;
-	color:white;
-	letter-spacing:5px
+table.calendar col.weekdays {
+    background-color: white;
 }
 
-table.calendar thead tr{
-	height:5%
-}
-table.calendar tbody tr{
-	height:19%
-}
-
-table.calendar td{
-	border:1px gray solid;
-	vertical-align:top
+table.calendar thead th {
+    background-color: #B28767;
+    color: white;
+    letter-spacing: 5px;
+    font-size: 10px;
 }
 
-h3{
-	font-size:8px;
-	margin:0px;
-	padding:0px
+table.calendar thead tr {
+    height: 5%
 }
 
-dl, dd, dt{
-	margin:0px;
-	padding:0px
+table.calendar tbody tr {
+    height: 19%
 }
 
+table.calendar td {
+    border: 1px gray solid;
+    vertical-align: top
+}
 
+h3 {
+    font-size: 8px;
+    margin: 0px;
+    padding: 0px
+}
 
+dl,
+dd,
+dt {
+    margin: 0px;
+    padding: 0px
+}
 
+@media only screen and (max-width: 1000px) {
+    table.calendar {
+        width: 700px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    table.calendar {
+        width: 500px;
+    }
+}

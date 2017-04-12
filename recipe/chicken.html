@@ -14,8 +14,9 @@ Filename: template.html
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--Main CSS -->
     <link href="../main/main.css" type="text/css" rel="stylesheet" />
-    <!--google font-->
+    <!--google font & Icons-->
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Include ur css for this page here-->
     <link type="text/css" href="chicken.css" rel="stylesheet">
 </head>
@@ -73,21 +74,43 @@ Filename: template.html
             if (x.includes("other")) {
                 document.getElementById("other").style.backgroundColor = "red";
             }
-
         </script>
     </nav>
 
     <section id="pageContent">
         <div class="recipe">
-            <h1 style="color:black;">Poached Chicken and Asparagus With Green Goddess Sauce Recipe</h1>
+            <h1 class="bigtitle">Poached Chicken and Asparagus With Green Goddess Sauce Recipe</h1>
             <h6>CANAL HOUSE</h6>
+
+            <a class="bookmark" href="#" onclick="chgicon()"><i id="love" class="material-icons">favorite_border</i><span id="bookmarktext">Favorite? Bookmark it!</span></a>
+            <script>
+                function chgicon() {
+                    if (document.getElementById("love").innerHTML == "favorite") {
+                        document.getElementById("love").innerHTML = "favorite_border";
+                        document.getElementById("bookmarktext").innerHTML = "Favorite? Bookmark it!";
+                    } else {
+                        document.getElementById("love").innerHTML = "favorite";
+                        document.getElementById("bookmarktext").innerHTML = "Added to Favorite!";
+                    }
+                }
+            </script>
+            <br>
+            <a id="rating">
+                <span>Rating:&nbsp;</span>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star_half</i>
+                <i class="material-icons">star_border</i>
+            </a>
+            <br>
             <div>
-                <img src="http://www.seriouseats.com/recipes/assets_c/2017/03/20170316-poached-chicken-aspargus-canal-house-10-thumb-1500xauto-436878.jpg" />
+                <img class="recipePic" src="20170316-poached-chicken-aspargus-canal-house-10-thumb-1500xauto-436878.jpg" />
             </div>
             <br/>
             <span id="credit">[Photograph: Canal House]</span>
-            <p>This easy meal of tender and juicy poached chicken with asparagus and a creamy green goddess sauce is light and fresh, perfect for marking the beginning of spring. For this dish, we lightened the green goddess with whipped cream, which softens the herbaceous flavor, making it more delicate, and lends a luscious, mousse-like consistency. (If you like, make just the dressing according to the instructions in step 4, omitting the whipped cream, and serve it with sturdy lettuces for salads.)</p>
-            <h1>WHY IT WORKS</h1>
+            <p>&emsp;&emsp;This easy meal of tender and juicy poached chicken with asparagus and a creamy green goddess sauce is light and fresh, perfect for marking the beginning of spring. For this dish, we lightened the green goddess with whipped cream, which softens the herbaceous flavor, making it more delicate, and lends a luscious, mousse-like consistency. (If you like, make just the dressing according to the instructions in step 4, omitting the whipped cream, and serve it with sturdy lettuces for salads.)</p>
+            <h1 class="title">WHY IT WORKS</h1>
             <ul>
                 <li>Starting the chicken in cold water and keeping the temperature under a boil cooks it perfectly, and prevents it from becoming tight and dry.</li>
                 <li>Folding softly whipped cream into the green goddess dressing makes it incredibly light and airy.</li>
@@ -103,7 +126,7 @@ Filename: template.html
                 </p>
             </div>
             <hr/>
-            <h1>INGREDIENTS</h1>
+            <h1 class="title">INGREDIENTS</h1>
             <h3>For the Chicken and Asparagus:</h3>
             <ul>
                 <li>4 bone-in, skin-on, split chicken breast halves (about 4 pounds; 1.8kg)</li>
@@ -131,7 +154,7 @@ Filename: template.html
                 <li>1 cup (240ml) heavy whipping cream</li>
             </ul>
             <hr/>
-            <h1>DIRECTIONS</h1>
+            <h1 class="title">DIRECTIONS</h1>
             <ol>
                 <li><span style="font-weight:bold;">For the Chicken and Asparagus:</span> In a large saucepan, combine chicken with carrot, celery, leek, tarragon sprigs, wine, salt, and peppercorns. Add enough water to cover chicken and other ingredients by about 1 inch. Set over medium-high heat until water temperature reaches between 150 and 160&deg;F (66 and 71&deg;C) on an instant-read thermometer; adjust heat to maintain water temperature in the 150-160&deg;F range. It's okay if the temperature bounces around a little, but try to keep it above 150 and below 170&deg;F (77&deg;C). Cook until thickest part of chicken registers 150&deg;F (66&deg;C) on an instant-read thermometer, about 1 hour. Remove chicken from broth and let rest.</li>
                 <li>When chicken is cool enough to handle, remove skin and bones. (If you want, return skin and bones to poaching liquid and simmer for 30 minutes longer, then strain and reserve liquid as a broth for another use.) Cover chicken breasts with plastic wrap, pressing plastic directly and firmly against the surface of the meat, and set aside.</li>
@@ -141,44 +164,59 @@ Filename: template.html
                 <li><span style="font-weight:bold;">To Serve:</span> Slice warm or room-temperature chicken breasts against the grain. Spoon some sauce onto a large platter. Arrange chicken on top of sauce and arrange warm or room-temperature buttered asparagus around chicken. Spoon more sauce over chicken. Season with salt and pepper and garnish with minced fresh chives. If you prefer, you can also serve on individual plates. Serve any extra green goddess sauce on the side.</li>
             </ol>
             <hr/>
-            <h1>SPECIAL EQUIPMENT</h1>
+            <h1 class="title">SPECIAL EQUIPMENT</h1>
             <p><a href="" class="recipelink">Blender</a> or <a href="" class="recipelink">food processor</a>, <a href="" class="recipelink">instant-read thermometer</a></p>
-            <h1>THIS RECIPE APPEARS IN</h1>
+            <h1 class="title">THIS RECIPE APPEARS IN</h1>
             <p><a href="chicken2.html" class="recipelink">The Canal House Perfect Bite: Poach Your Chicken and Asparagus for a Light, Easy Meal</a></p>
-        </div>
-        <hr/>
-        <p id="profile">
-            <img src="http://www.seriouseats.com/mt-static/support/assets_c/userpics/userpic-1260276-100x100.png" /> CANAL HOUSE CONTRIBUTORS
-        </p>
-        <p>Canal House is a culinary, photography, and design studio operated by Christopher Hirsheimer and Melissa Hamilton. They are home cooks who write about home cooking for other home cooks. Together, they collaborate on Canal House Cooking, a series of seasonal cookbooks for which they do all the writing, recipes, photography, design, and production. They were the recipients of the 2013 James Beard Foundation award in the General Cooking category for their cookbook, Canal House Cooks Every Day (Andrews McMeel, 2012), and were nominees for their Bon Appétit video series, "The Seasonal Cooks," as well as 2013 IACP nominees for Photography and Food Styling. Their next book, Cook Something (Little, Brown), will be available fall 2017.</p>
-        <div id="commentbox">
-            <h1>5 COMMENTS</h1>
-            <div class="comment">
-                <span>cookbot 4:39PM on 03/22/17</span>
-                <p>I used to work in a restaurant that did something similar with Louis Dressing for seafood salads -- i.e., made a standard Louis and then moussed it up with just a bit of whipped cream. Really poshed it up; bet it would work great with Green Goddess too.</p>
+            <hr/>
+            <p id="profile">
+                <img src="userpic-1260276-100x100.png" /> CANAL HOUSE || CONTRIBUTORS
+            </p>
+            <p>Canal House is a culinary, photography, and design studio operated by Christopher Hirsheimer and Melissa Hamilton. They are home cooks who write about home cooking for other home cooks. Together, they collaborate on Canal House Cooking, a series of seasonal cookbooks for which they do all the writing, recipes, photography, design, and production. They were the recipients of the 2013 James Beard Foundation award in the General Cooking category for their cookbook, Canal House Cooks Every Day (Andrews McMeel, 2012), and were nominees for their Bon Appétit video series, "The Seasonal Cooks," as well as 2013 IACP nominees for Photography and Food Styling. Their next book, Cook Something (Little, Brown), will be available fall 2017.</p>
+            <form class="commentbox">
+                <h3 style="text-align:center;">Post a Comment</h3>
+                <fieldset>
+                    <label for="name">Name:</label>
+                    <input for="name" type="text" size="50" />
+                    <br/>&nbsp;
+                    <label for="comment">Comment:</label>
+                    <textarea id="comment" cols="80" rows="8"></textarea> &nbsp;
+                    <br/>
+                    <input type="submit" value="Post" />
+                </fieldset>
+            </form>
+            <h1>3 COMMENTS</h1>
+            <div class="comsection">
+                <div class="comment">
+                    <span class="user">cookbot <br> 4:39PM on 03/22/17</span><span class="com">I used to work in a restaurant that did something similar with Louis Dressing for seafood salads -- i.e., made a standard Louis and then moussed it up with just a bit of whipped cream. Really poshed it up; bet it would work great with Green Goddess too.</span>
+                </div>
+                <div class="comment">
+                    <span class="user">flowergarden129 <br>5:49PM on 03/22/17</span>
+                    <span class="com">This sounds like a perfect recipe to sous vide, with a smaller amount of poaching liquid included in each individual bag. It would make holding the chicken at the right temperature for the hour very easy.</span>
+                </div>
+                <div class="comment">
+                    <span class="user">FlavorCountry 11:00PM on 03/22/17</span>
+                    <span class="com">Y'all shoulda left the country fried chicken on the headliner. Are y'all actually getting that many more page clicks from pseudo vegan health yuppies to put boiled chicken on top?</span>
+                </div>
             </div>
-
-            <div>flowergarden129 5:49PM on 03/22/17</div>
-            <p>This sounds like a perfect recipe to sous vide, with a smaller amount of poaching liquid included in each individual bag. It would make holding the chicken at the right temperature for the hour very easy.</p>
-            <div>FlavorCountry 11:00PM on 03/22/17</div>
-            <p>Y'all shoulda left the country fried chicken on the headliner. Are y'all actually getting that many more page clicks from pseudo vegan health yuppies to put boiled chicken on top?</p>
         </div>
+
     </section>
 
     <footer id="footer">
         <hr/>
         <p id="flogo">
-            <a href="../homepage/homepage.html">
+            <a href="../homepage/homepage.html ">
                 <img src="../main/FoodBlissLogo.png" alt="flogo" />
             </a>
         </p>
-        <p id="scicon">
+        <p id="scicon ">
             <!-- Add font awesome icons -->
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-twitter"></a>
-            <a href="#" class="fa fa-instagram"></a>
-            <a href="#" class="fa fa-youtube"></a>
-            <a href="#" class="fa fa-rss"></a>
+            <a href="# " class="fa fa-facebook "></a>
+            <a href="# " class="fa fa-twitter "></a>
+            <a href="# " class="fa fa-instagram "></a>
+            <a href="# " class="fa fa-youtube "></a>
+            <a href="# " class="fa fa-rss "></a>
         </p>
         <p>&copy 2017 Food Bliss.</p>
     </footer>

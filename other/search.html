@@ -18,6 +18,8 @@ Filename: template.html
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <!--Include ur css for this page here-->
     <link type="text/css" href="template.css" rel="stylesheet">
+    <link type="text/css" href="search.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -31,7 +33,7 @@ Filename: template.html
             <a id="tips" href="../tips/tips.html">TIPS &amp; GUIDELINES</a>
             <a id="kitchen" href="../kitchen/kitchen.html">KITCHEN ESSENTIALS</a>
             <a id="about" href="../about/about.html">ABOUT US</a>
-            <a id="other" href="../other/other.html">OTHERS</a>
+            <a id="other" href="other.html">OTHERS</a>
             <input type="text" name="search" placeholder="Search.." class="searchbar" id="searchbar" />
             <a href="javascript:void(0);" class="icon" onclick="dispH()">&#9776;</a>
         </div>
@@ -73,27 +75,74 @@ Filename: template.html
             if (x.includes("other")) {
                 document.getElementById("other").style.backgroundColor = "red";
             }
+
         </script>
     </nav>
 
     <section id="pageContent">
+        <div class="grid">
+            <h2>Search Result: Chicken</h2>
+            <h2 style="text-align:center;">Recipe</h2>
+            <div class="square">
+                <a href="#">
+                    <img src="http://www.seriouseats.com/recipes/assets_c/2017/02/20170217-jambalaya-vicky-wasik-25-thumb-625xauto-436629.jpg">
+                    <h4 class="stext">Creole-Style Red Jambalaya with Chicken, Sausage, and Shrimp</h4>
+                    <h6 class="stext">DANIEL GRITZER</h6>
+                </a>
+            </div>
+            <div class="square">
+                <a href="#">
+                    <img src="http://www.seriouseats.com/recipes/assets_c/2017/01/20170131-quesadillas-three-variations-2-thumb-625xauto-436174.jpg">
+                    <h4 class="stext">Spicy Chicken Quesadillas<br/>&nbsp;</h4>
+                    <h6 class="stext">J.KENJI LOPEZ-ALT</h6>
+                </a>
+            </div>
+            <div class="square">
+                <a href="#">
+                    <img src="http://www.seriouseats.com/recipes/assets_c/2017/01/20161212-chicken-piccata-vicky-wasik-10-thumb-625xauto-435784.jpg">
+                    <h4 class="stext">Chicken Piccata (Fried Chicken Cutlets With Lemon-Butter Pan Sauce)</h4>
+                    <h6 class="stext">DANIEL GRITZER</h6>
+                </a>
+            </div>
+            <h2 style="text-align:center;">Tips and Guidelines</h2>
+            <div class=" square ">
+                <a href="# ">
+                    <img src="http://www.seriouseats.com/assets_c/2017/03/20170224-pressure-cooker-chicken-stock-vicky-wasik-1-thumb-625xauto-436936.jpg ">
+                    <h4 class="stext ">How to Make Pressure Cooker Chicken Stock;</h4>
+                    <h6 class="stext ">DANIEL GRITZER</h6>
+                </a>
+            </div>
+            <div class="square ">
+                <a href="# ">
+                    <img src="http://www.seriouseats.com/assets_c/2015/04/20150413-cashew-chicken-ding-shao-zhong-17-thumb-625xauto-421972.jpg ">
+                    <h4 class="stext ">How to Make the Best Cashew Chicken at Home</h4>
+                    <h6 class="stext ">SHAO Z.</h6>
+                </a>
+            </div>
+            <div class="square ">
+                <a href="essential%20tips.html " target="_blank ">
+                    <img src="http://www.seriouseats.com/assets_c/2016/03/20160318-poached-chicken-vicky-wasik-3-thumb-625xauto-430699.jpg ">
+                    <h4 class="stext ">Cold-Start Your Way to the Tenderest Poached Chicken</h4>
+                    <h6 class="stext ">DANIEL GRITZER</h6>
+                </a>
+            </div>
 
+        </div>
     </section>
 
     <footer id="footer">
-        <hr/>
-        <p>
+        <p id="flogo">
             <a href="../homepage/homepage.html">
-                <img src="../main/FoodBlissLogo.png" alt="flogo" id="flogo" />
+                <img src="../main/FoodBlissLogo.png " alt="flogo" />
             </a>
         </p>
         <p id="scicon">
             <!-- Add font awesome icons -->
             <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-twitter"></a>
-            <a href="#" class="fa fa-instagram"></a>
-            <a href="#" class="fa fa-youtube"></a>
-            <a href="#" class="fa fa-rss"></a>
+            <a href="# " class="fa fa-twitter"></a>
+            <a href="# " class="fa fa-instagram"></a>
+            <a href="# " class="fa fa-youtube"></a>
+            <a href="# " class="fa fa-rss"></a>
         </p>
         <p>&copy 2017 Food Bliss.</p>
     </footer>

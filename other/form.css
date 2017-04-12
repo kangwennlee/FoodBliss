@@ -1,0 +1,27 @@
+#calculator {
+    display: flex;
+    justify-content: center;
+}
+
+#result {
+    text-align: center;
+}
+
+form legend {
+    font-size: 20px;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.label {
+    line-height: 40px;
+}
+
+#calBut {
+    text-align: right;
+}
+
+#calForm {
+    background-color: aliceblue;
+    width: 400px;
+}
