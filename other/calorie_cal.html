@@ -75,7 +75,6 @@ Filename: calorie_cal.html
             if (x.includes("other")) {
                 document.getElementById("other").style.backgroundColor = "red";
             }
-
         </script>
     </nav>
 
@@ -154,10 +153,6 @@ Filename: calorie_cal.html
                     </div>
                 </fieldset>
                 <script>
-                    function testing() {
-                        window.alert(5 + 6);
-                    }
-
                     function count() {
                         var age = document.getElementById("age").value;
                         var weight = document.getElementById("weight").value;
@@ -175,12 +170,11 @@ Filename: calorie_cal.html
 
                         var cpd = level * BMR;
 
-                        document.getElementById("result").innerHTML = cpd + " kcal per day"
+                        document.getElementById("result").innerHTML = Math.round(cpd) + " kcal per day"
                         //                        document.write("Results: your daily calorie requirements is " + cpd);
                         //                      window.alert(cpd);
 
                     }
-
                 </script>
             </form>
         </div>
